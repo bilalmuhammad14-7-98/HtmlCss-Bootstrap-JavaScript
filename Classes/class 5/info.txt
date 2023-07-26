@@ -1,0 +1,11 @@
+absolute urls:
+
+when we call other websites in our website these urls are called
+absolute urls
+
+relatative urls:
+when we make our own pages and subfolers and create a website on our own.These are called relative urls 
+
+
+./ this means moves to current and forward directory
+../ this means moves to backward directory

@@ -1,0 +1,30 @@
+symentic tags / markup
+these are seo friendly tags
+basically used for users who are blind
+
+<strong></strong>
+
+values inside the tags are called attributes
+<blockquote>
+
+</blockquote>
+
+
+<sub></sub>
+<sup></sup>
+
+<em></em> emphasis used for making text italic
+
+<del></del> used to add a a line on the text
+
+<ins></ins> to add a underline 
+
+
+those elements who brake the line are block element
+those who dont brake lines are called inline elements
+
+<s></s> is also used for cross but its is and semantic element
+
+<abbr>
+</abbr>
+
