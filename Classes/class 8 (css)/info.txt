@@ -1,0 +1,25 @@
+class selector:
+
+called using . operator
+
+type selector:
+
+example of type selector
+#ty, #by{
+    color: blur
+}
+
+id selector:
+
+called using # 
+
+comments difference in html file and css file (quiz)
+
+
+universal selector:
+
+called using * selector
+
+rgb has the max value of 255 and min value of 0
+
+hue saturation lightness (hsl)
