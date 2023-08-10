@@ -1,0 +1,62 @@
+body {
+  background-color: #08b2d9;
+}
+#mainHeading {
+  color: red;
+  text-align: center;
+}
+
+#mainHeading span {
+  color: yellow;
+  text-indent: 50px;
+}
+
+.image {
+  text-align: center;
+}
+
+.image img {
+  border-radius: 10px;
+  height: 200px;
+}
+
+.description .desc-one,
+.description .desc-two,
+.description .desc-three {
+  word-spacing: 10px;
+  text-align: justify;
+  text-indent: 50px;
+  line-height: 25px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.desc-one {
+  color: blue;
+}
+
+.desc-two,
+.desc-three {
+  color: yellow;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#google {
+  color: red;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+#email {
+  color: yellow;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 25px;
+}
