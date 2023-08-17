@@ -1,0 +1,52 @@
+ul{
+    list-style-type:lower-roman;
+    list-style-position: outside;
+    background-color: aqua;
+}
+
+table{
+    margin: auto;
+    background-color: antiquewhite;
+    width: 80%;
+    padding: 5px;
+  
+    border-spacing: 20px;
+}
+
+.row{
+    background-color: pink;
+}
+
+.heading{
+    background-color: chocolate;
+    color: white;
+}
+
+table , td, th{
+    border: 1px solid black;
+}
+
+td{
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;}
+
+td:hover{
+    background-color: black;
+    color: white;
+    /* transform: scale(1.2); */
+}
+
+label{
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+}
+
+#password{
+    background-image: url("https://cdn.pixabay.com/photo/2016/12/18/11/04/eye-1915455_1280.png");
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left: 20px;
+
+}
