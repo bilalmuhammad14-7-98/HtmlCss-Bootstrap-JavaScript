@@ -1,0 +1,48 @@
+.main{
+    background-color: aqua;
+    width: 50%;
+    margin: auto;
+    /* height: 100px; */
+    overflow: hidden;
+    border: 1px solid black;
+    margin-top: 50px;
+    padding: 20px;
+
+    box-shadow: 1px 1px 10px black;
+    border-radius: 360px;
+
+}
+/* box shadow 
+first parameter means top bottom
+second means left right
+third means quantity
+fourth means color
+*/
+
+ul{
+    background-color: palegreen;
+ 
+}
+ul > li{
+    display: inline-block;
+    padding-left: 10px;
+    background-color: blueviolet;
+    width: 200px;
+    text-align: center;
+    margin: auto;
+}
+
+.nav{
+    background-color: pink;
+    width: 80%;
+    margin: auto;
+}
+
+.nav > a{
+    margin-left: 60px;
+    justify-content: center;
+}
+
+#contact{
+    visibility: hidden;
+}
