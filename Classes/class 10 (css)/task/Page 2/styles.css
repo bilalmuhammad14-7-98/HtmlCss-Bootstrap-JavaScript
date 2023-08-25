@@ -1,0 +1,126 @@
+body {
+  background-image: url(./images/background.jpg);
+  background-color: #cccccc; /* Used if the image is unavailable */
+  /* You must set a specified height */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.heading > h1 {
+  text-align: center;
+  color: white;
+  margin-top: 50px;
+}
+
+.navbar ul {
+  /* height: 30px; */
+}
+
+.navbar ul > li {
+  font-size: 20px;
+  font-weight: bold;
+  display: inline-block;
+  width: 220px;
+  max-width: 220px;
+  background-color: rgb(221, 198, 198);
+  opacity: 0.5;
+  text-align: center;
+  margin-right: 32px;
+  margin-left: 32px;
+  /* margin: 20px; */
+  padding: 16px;
+  border-radius: 10px;
+}
+
+.navbar ul > li:hover {
+  background-color: white;
+  color: darkgreen;
+  opacity: 1;
+  font-size: 20px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.contet_section {
+  width: 100%;
+  margin-top: 4rem;
+}
+
+.left_section {
+  float: left;
+  background-color: rgb(16, 83, 16);
+  width: 30%;
+  height: 1000px;
+  margin: auto;
+}
+
+.image_section {
+  width: 80%;
+  margin: auto;
+  margin-top: 64px;
+}
+
+.image_section > img {
+  width: 300px;
+  height: 220px;
+  border: 2px solid black;
+}
+
+.right_section {
+  float: right;
+  width: 70%;
+  background: rgb(180, 241, 54);
+  background: linear-gradient(
+    180deg,
+    rgba(180, 241, 54, 1) 29%,
+    rgba(255, 255, 255, 1) 93%
+  );
+  height: 1000px;
+}
+
+.description {
+  background-color: aqua;
+  margin: 10px;
+}
+
+.description_heading {
+  background-color: red;
+  width: 50%;
+}
+
+.description_paragraph > p {
+  word-spacing: 10px;
+  line-height: 26px;
+}
+
+.table_section {
+  width: 80%;
+  margin: auto;
+  /* background: pink; */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: rgb(118, 255, 118);
+}
+
+table td,
+table th {
+  border: 1px solid rgb(255, 229, 229);
+  padding: 8px;
+}
+
+td {
+  text-align: center;
+}
+
+tr > .first_element {
+  text-align: left;
+}
