@@ -1,0 +1,46 @@
+.main{
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    padding: 10px;
+    /* justify-content: space-evenly; */
+    height: 400px;
+
+    align-items:center;
+    flex-wrap: wrap;
+
+}
+
+ /* four properties of flex-direction: 
+    row , row - reverse
+    column, column reverse
+    */
+
+    /* To move elements in x- axis we use justify content */
+    /* to move elements in y-axis we use align items */
+
+
+    /* we use align-self to give align property to that specific div */
+
+.one{
+    background-color: aqua;
+    order: 2;
+}
+
+.two{
+    background-color: yellow;
+    /* align-self: flex-start; */
+}
+
+.three{
+    background-color: greenyellow;
+    /* align-self: center; */
+}
+
+.four{
+ background-color: orange;
+}
+
+.five{
+     background-color: blue;
+}
