@@ -1,0 +1,16 @@
+.nav-bg-color-static{
+    background-color:  #00ff80 !important;
+    /* padding: 20px !important;  */
+    /* margin: 10px !important; */
+    /* border-radius: 10px; */
+    position: sticky;
+}
+
+img{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cards-section{
+    padding: 40px;
+}
