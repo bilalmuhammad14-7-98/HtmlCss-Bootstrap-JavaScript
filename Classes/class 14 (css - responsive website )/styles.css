@@ -216,3 +216,61 @@ body {
 .service-box.pink {
   border-bottom: 3px solid #f51f9c;
 }
+
+/* Core Values */
+.core-values {
+  padding: 60px 0;
+}
+
+.core-values .header-section {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.core-values .header-section h2 {
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin: 0;
+  color: #4154f1;
+  text-transform: uppercase;
+  font-family: "Nunito", sans-serif;
+}
+
+.core-values .header-section p {
+  margin: 10px 0 0 0;
+  padding: 0;
+  font-size: 38px;
+  line-height: 42px;
+  font-weight: 700;
+  color: #012970;
+}
+
+.feature-box-parent {
+  margin-top: 10px;
+}
+
+.feature-box {
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
+  padding: 11px 10px;
+  border-radius: 10px;
+}
+
+.feature-box h3 {
+  font-size: 18px;
+  color: #012970;
+  font-weight: 700;
+  margin: 0;
+}
+
+.feature-box i {
+  line-height: 0;
+  background: #ecf3ff;
+  padding: 4px;
+  margin-right: 10px;
+  font-size: 24px;
+  border-radius: 3px;
+  transition: 0.3s;
+}
