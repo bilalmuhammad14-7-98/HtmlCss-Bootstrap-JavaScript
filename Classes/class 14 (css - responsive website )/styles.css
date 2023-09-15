@@ -7,6 +7,7 @@ body {
   top: 0;
   position: sticky;
   box-shadow: 5px 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
 }
 .nav-item {
   margin: 0 5px 0 5px;
@@ -103,4 +104,115 @@ body {
 }
 
 .image-section {
+}
+
+/* Services section */
+.heading-section {
+  text-align: center;
+  padding: 60px 0;
+}
+
+.heading-section h2 {
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin: 0;
+  color: #4154f1;
+  text-transform: uppercase;
+  font-family: "Nunito", sans-serif;
+}
+
+.heading-section p {
+  margin: 10px 0 0 0;
+  padding: 0;
+  font-size: 38px;
+  line-height: 42px;
+  font-weight: 700;
+  color: #012970;
+}
+
+.service-box {
+  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
+  height: 100%;
+  padding: 60px 30px;
+  text-align: center;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+.service-box .icon {
+  font-size: 36px;
+  padding: 40px 20px;
+  border-radius: 4px;
+  position: relative;
+  margin-bottom: 25px;
+  display: inline-block;
+  line-height: 0;
+  transition: 0.3s;
+  border-radius: 20px;
+}
+
+.service-box h3 {
+  color: #444444;
+  font-weight: 700;
+  font-family: "Nunito", sans-serif;
+}
+
+.service-box p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.service-box.blue .icon {
+  color: #2db6fa;
+  background: #dbf3fe;
+}
+
+.service-box.blue {
+  border-bottom: 3px solid #2db6fa;
+}
+
+.service-box.orange .icon {
+  color: #f68c09;
+  background: #fde3c4;
+}
+
+.service-box.orange {
+  border-bottom: 3px solid #f68c09;
+}
+
+.service-box.green .icon {
+  color: #08da4e;
+  background: #cffddf;
+}
+
+.service-box.green {
+  border-bottom: 3px solid #08da4e;
+}
+
+.service-box.red .icon {
+  color: #e9222c;
+  background: #fef7f8;
+}
+
+.service-box.red {
+  border-bottom: 3px solid #e9222c;
+}
+
+.service-box.purple .icon {
+  color: #b50edf;
+  background: #f8e4fd;
+}
+
+.service-box.purple {
+  border-bottom: 3px solid #b50edf;
+}
+
+.service-box.pink .icon {
+  color: #f51f9c;
+  background: #feecf7;
+}
+
+.service-box.pink {
+  border-bottom: 3px solid #f51f9c;
 }
