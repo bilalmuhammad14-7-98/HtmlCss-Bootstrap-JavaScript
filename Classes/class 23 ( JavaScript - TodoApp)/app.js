@@ -36,7 +36,10 @@ function handleDelete(e) {
 function handleEdit(e) {
   console.log("handleEdit=>", e.parentNode);
 
-  var newText = prompt("Please enter the new text");
+  var newText = prompt(
+    "Please enter the new text",
+    e.parentNode.firstChild.textContent
+  );
   console.log("newText=>", newText);
   e.parentNode.firstChild.textContent = newText;
 }
