@@ -1,0 +1,13 @@
+.main {
+  background-color: wheat;
+  margin: auto 0;
+}
+
+.textfield {
+  display: flex;
+  /* justify-content: center; */
+}
+
+.buttons {
+  margin: auto;
+}
