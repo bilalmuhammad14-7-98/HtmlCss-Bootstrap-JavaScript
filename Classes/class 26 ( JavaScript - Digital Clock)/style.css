@@ -1,0 +1,107 @@
+@font-face {
+  font-family: "digital-clock-font";
+  src: url("put_the_location_to_your_font.ttf or .otf");
+}
+
+body {
+  background-color: #f0f8ff;
+}
+
+.heading {
+  text-align: center;
+  font-family: "Orbitron", "sans-serif";
+}
+
+.main {
+  background-color: #ffffff;
+  width: 70%;
+  margin: auto;
+  /* border: 1px solid black; */
+  box-shadow: 0px 0px 6px 1px #d9d9d9;
+  padding: 10px 10px;
+  border-radius: 22px;
+}
+
+.clock {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  justify-content: space-around;
+  margin-bottom: 46px;
+  /* border: 1px solid black; */
+}
+
+.clock-box {
+  background-color: #f0f8ff;
+  padding: 14px 60px;
+  border-radius: 27px;
+  box-shadow: 0px 0px 2px 1px #d9d9d9;
+  transition: 0.5s;
+}
+
+.clock-box:hover {
+  background-color: #f0f8ff;
+  /* padding: 14px 60px;
+  border-radius: 27px; */
+  box-shadow: 0px 0px 10px 10px #d9d9d9;
+  transition: 0.5s;
+}
+
+.clock-box h2 {
+  text-align: center;
+}
+
+.separators {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 44px;
+}
+
+.img-tag {
+  text-align: right;
+  margin: 10px 20px 5px 0px;
+  color: white;
+}
+
+.img-box {
+  background-color: black;
+  padding: 9px;
+  border-radius: 27px;
+  overflow: visible;
+}
+
+.time-number {
+  font-family: "Orbitron", "sans-serif";
+  font-size: 32px;
+}
+
+.time-text {
+  font-family: "Orbitron", "sans-serif";
+  font-size: 16px;
+}
+
+.time-format {
+  font-family: "Orbitron", "sans-serif";
+}
+
+@media screen and (max-width: 1199px) and (min-width: 1024px) {
+}
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+}
+@media screen and (max-width: 767px) and (min-width: 300px) {
+  .main {
+    background-color: #ffffff;
+    width: 90%;
+    margin: auto;
+    /* border: 1px solid black; */
+    box-shadow: 0px 0px 6px 1px #d9d9d9;
+    padding: 10px 10px;
+    border-radius: 22px;
+  }
+
+  .time-format {
+    margin-top: 10px;
+  }
+}
