@@ -14,30 +14,36 @@ body {
 
 .main {
   background-color: #ffffff;
-  width: 70%;
+  max-width: 40%;
   margin: auto;
-  /* border: 1px solid black; */
-  box-shadow: 0px 0px 6px 1px #d9d9d9;
-  padding: 10px 10px;
-  border-radius: 22px;
+  box-shadow: 0px 0px 6px 1px #d8d8d8;
+  border-radius: 15px;
+  position: relative;
+  min-height: 225px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .clock {
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
   width: 80%;
-  justify-content: space-around;
-  margin-bottom: 46px;
-  /* border: 1px solid black; */
+  position: relative;
 }
 
 .clock-box {
   background-color: #f0f8ff;
-  padding: 14px 60px;
-  border-radius: 27px;
+  border-radius: 15px;
   box-shadow: 0px 0px 2px 1px #d9d9d9;
   transition: 0.5s;
+  cursor: pointer;
+  width: calc(70% / 3);
+  height: 120px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 20px;
+  position: relative;
 }
 
 .clock-box:hover {
@@ -60,9 +66,11 @@ body {
 }
 
 .img-tag {
-  text-align: right;
-  margin: 10px 20px 5px 0px;
+  top: 10px;
+  margin: 0;
   color: white;
+  position: absolute;
+  right: 10px;
 }
 
 .img-box {
@@ -74,34 +82,116 @@ body {
 
 .time-number {
   font-family: "Orbitron", "sans-serif";
-  font-size: 32px;
+  font-size: 50px;
+  text-align: center;
+  margin: 0;
 }
-
 .time-text {
   font-family: "Orbitron", "sans-serif";
   font-size: 16px;
+  text-align: center;
+  margin: 0;
 }
 
 .time-format {
   font-family: "Orbitron", "sans-serif";
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.clock-box:before {
+  content: ":";
+  position: absolute;
+  right: -26px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  font-weight: 600;
+}
+.clok_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: center;
 }
 
+.clock-box:last-child:before {
+  display: none;
+}
 @media screen and (max-width: 1199px) and (min-width: 1024px) {
-}
-@media screen and (max-width: 1023px) and (min-width: 768px) {
-}
-@media screen and (max-width: 767px) and (min-width: 300px) {
   .main {
-    background-color: #ffffff;
-    width: 90%;
-    margin: auto;
-    /* border: 1px solid black; */
-    box-shadow: 0px 0px 6px 1px #d9d9d9;
-    padding: 10px 10px;
-    border-radius: 22px;
+    max-width: 63%;
+    padding: 50px;
+  }
+
+  .clock {
+  }
+
+  .clok_wrapper {
+  }
+
+  .clock-box {
+    width: calc(100% / 1);
+    margin-bottom: 28px;
   }
 
   .time-format {
-    margin-top: 10px;
+    margin: -27px -9px 10px 10px;
+  }
+
+  .img-tag {
+    left: 10px;
   }
 }
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .main {
+    max-width: 63%;
+    padding: 50px;
+  }
+
+  .clock {
+  }
+
+  .clok_wrapper {
+  }
+
+  .clock-box {
+    width: calc(100% / 1);
+    margin-bottom: 28px;
+  }
+
+  .time-format {
+    margin: -27px -9px 10px 10px;
+  }
+
+  .img-tag {
+    left: 10px;
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 100px) {
+  .main {
+    max-width: 63%;
+    padding: 50px;
+  }
+
+  .clock {
+  }
+
+  .clok_wrapper {
+  }
+
+  .clock-box {
+    width: calc(100% / 1);
+    margin-bottom: 28px;
+  }
+
+  .time-format {
+    margin: -27px -9px 10px 10px;
+  }
+
+  .img-tag {
+    left: 10px;
+  }
+}
+
+/* Media query for screens up to 768px (including mobiles and iPads) */
