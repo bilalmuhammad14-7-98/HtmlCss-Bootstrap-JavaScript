@@ -23,3 +23,9 @@ function startClock() {
 }
 
 startClock();
+
+function darkMode() {
+  console.log("darkmode");
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+}
