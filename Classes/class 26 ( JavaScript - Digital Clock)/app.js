@@ -22,7 +22,9 @@ function startClock() {
   interval = setInterval(digialClock, 1000);
 }
 
-startClock();
+function stopClock() {
+  clearInterval(interval);
+}
 
 function darkMode() {
   console.log("darkmode");

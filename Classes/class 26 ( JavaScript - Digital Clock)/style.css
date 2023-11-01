@@ -24,6 +24,7 @@ body {
   width: 100%;
 }
 
+/* Dark Mode */
 .dark-mode {
 }
 
@@ -86,10 +87,27 @@ body {
   color: black;
 }
 
+.dark-mode .startbtn,
+.dark-mode .endbtn {
+  background-color: #2a2c2e !important;
+  color: white !important;
+}
+
+.dark-mode .startbtn:hover,
+.dark-mode .endbtn:hover {
+  /* border: 4px solid !important; */
+  /* border-color: rgb(51, 61, 168) !important; */
+  box-shadow: 0px 0px 7px 4px #d9d9d9 !important;
+  transition: 0.5s !important;
+}
+
+/* Dark Mode */
+
 .heading {
   text-align: center;
   font-family: "Orbitron", "sans-serif";
 }
+
 .main {
   background-color: rgb(255, 255, 255);
   width: 55%;
@@ -196,9 +214,41 @@ body {
 .clock-box:last-child:before {
   display: none;
 }
+
+.buttons_sec {
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.button_inner {
+  display: flex;
+  justify-content: center;
+  gap: 36px;
+}
+
+.startbtn,
+.endbtn {
+  padding: 10px !important;
+  padding: 7px 30px !important;
+  border-radius: 12px !important;
+  background-color: #f0f8ff !important;
+  color: black !important;
+  border: none !important;
+  font-family: "Orbitron", "sans-serif" !important;
+  box-shadow: 0px 0px 2px 1px #d9d9d9 !important;
+}
+
+.startbtn:hover,
+.endbtn:hover {
+  /* border: 4px solid !important; */
+  /* border-color: rgb(51, 61, 168) !important; */
+  box-shadow: 0px 20px 16px 7px #d9d9d9 !important;
+  transition: 0.5s !important;
+}
+
 @media screen and (max-width: 1199px) and (min-width: 1024px) {
   .main {
-    max-width: 63%;
+    width: 90%;
     padding: 50px;
   }
 
@@ -223,7 +273,7 @@ body {
 }
 @media screen and (max-width: 1023px) and (min-width: 768px) {
   .main {
-    max-width: 63%;
+    width: 90%;
     padding: 50px;
   }
 
@@ -244,11 +294,18 @@ body {
 
   .img-tag {
     left: 10px;
+  }
+
+  .button_inner {
+    display: flex;
+    justify-content: center;
+    gap: 36px;
+    flex-wrap: wrap;
   }
 }
-@media screen and (max-width: 767px) and (min-width: 100px) {
+@media screen and (max-width: 767px) and (min-width: 300px) {
   .main {
-    max-width: 63%;
+    width: 90%;
     padding: 50px;
   }
 
@@ -269,6 +326,13 @@ body {
 
   .img-tag {
     left: 10px;
+  }
+
+  .button_inner {
+    display: flex;
+    justify-content: center;
+    gap: 36px;
+    flex-wrap: wrap;
   }
 }
 
