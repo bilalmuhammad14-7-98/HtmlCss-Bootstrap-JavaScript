@@ -1,0 +1,50 @@
+body {
+  background-color: #eeeeec;
+}
+
+.maincontainer {
+  /* border: 1px solid black !important; */
+  /* height: 100px !important; */
+}
+
+.profile-main {
+  background-color: #fdfeff;
+  margin: auto;
+  width: 80%;
+  /* border: 1px solid red; */
+  margin-top: 70px;
+  /* height: 80%; */
+
+  /* box-shadow: 10px 10px 10px rgb(233, 229, 222); */
+}
+
+.header {
+  border: 1px solid blue;
+}
+
+.connect-btn {
+  background-color: #11cdef !important;
+  border: none;
+}
+
+.message-btn {
+  background-color: #172b4d !important;
+  border: none;
+}
+
+.img_div {
+  height: 100px;
+  width: 100px;
+  background-color: #172b4d;
+  border-radius: 100%;
+  margin: 0 auto;
+  margin-top: -38px;
+  background-image: url(./images/person.jpg);
+  background-size: cover;
+}
+
+/* Description */
+
+.description {
+  border: 1px solid saddlebrown;
+}
