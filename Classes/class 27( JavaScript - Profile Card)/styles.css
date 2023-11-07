@@ -71,3 +71,39 @@ body {
   font-size: 0.875rem;
   color: #adb5bd;
 }
+
+/* Bio Section */
+
+.bio-section {
+  margin-top: 32px;
+}
+
+.user-name {
+  font-size: 1.0625rem;
+  font-family: inherit;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+  color: #32325d;
+}
+
+.user-age {
+  font-weight: 300 !important;
+}
+
+.user-address {
+  font-weight: 300 !important;
+}
+
+.user-info {
+  font-family: inherit;
+  font-weight: 600 !important;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+  color: #32325d;
+  font-size: 0.8125rem;
+}
+
+.user-detail {
+  color: #525f7f;
+}
