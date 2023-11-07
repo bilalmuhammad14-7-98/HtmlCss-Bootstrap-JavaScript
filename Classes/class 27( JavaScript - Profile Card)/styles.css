@@ -19,9 +19,14 @@ body {
 }
 
 .header {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
 }
 
+.button-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .connect-btn {
   background-color: #11cdef !important;
   border: none;
@@ -46,5 +51,23 @@ body {
 /* Description */
 
 .description {
-  border: 1px solid saddlebrown;
+  /* border: 1px solid saddlebrown; */
+  margin-top: 32px;
+}
+
+.description_content {
+  /* border: 1px solid red !important; */
+}
+
+.number_count {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #525f7f;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+}
+
+.number_count_text {
+  font-size: 0.875rem;
+  color: #adb5bd;
 }
