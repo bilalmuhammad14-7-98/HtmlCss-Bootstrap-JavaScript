@@ -119,3 +119,17 @@ body {
   color: #5e72e4;
   background-color: transparent;
 }
+
+@media screen and (max-width: 575px) and (min-width: 300px) {
+  .connect-btn {
+    font-size: 8px;
+  }
+
+  .message-btn {
+    font-size: 8px;
+  }
+
+  .profile-main {
+    width: 100%;
+  }
+}
