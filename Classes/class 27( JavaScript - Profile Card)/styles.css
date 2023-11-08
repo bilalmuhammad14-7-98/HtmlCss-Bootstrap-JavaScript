@@ -13,6 +13,8 @@ body {
   width: 80%;
   /* border: 1px solid red; */
   margin-top: 70px;
+  margin: 30px auto;
+
   /* height: 80%; */
 
   /* box-shadow: 10px 10px 10px rgb(233, 229, 222); */
@@ -53,10 +55,6 @@ body {
 .description {
   /* border: 1px solid saddlebrown; */
   margin-top: 32px;
-}
-
-.description_content {
-  /* border: 1px solid red !important; */
 }
 
 .number_count {
@@ -106,4 +104,18 @@ body {
 
 .user-detail {
   color: #525f7f;
+}
+
+/* Footer */
+.footer-para {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: #525f7f;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: #5e72e4;
+  background-color: transparent;
 }
