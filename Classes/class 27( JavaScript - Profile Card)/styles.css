@@ -2,6 +2,13 @@ body {
   background-color: #eeeeec;
 }
 
+body {
+  background-color: #f0f8ff;
+  background-image: url(./images/backimg1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .maincontainer {
   /* border: 1px solid black !important; */
   /* height: 100px !important; */
@@ -14,7 +21,7 @@ body {
   margin-top: 70px;
   margin: 60px auto;
   border-radius: 6px;
-  box-shadow: 10px 10px 10px rgb(233, 229, 222);
+  box-shadow: 0px 0px 10px rgb(233, 229, 222);
 }
 
 .search-bar-box {
@@ -39,7 +46,7 @@ body {
   margin-top: 70px;
   margin: 60px auto;
   border-radius: 20px;
-  box-shadow: 10px 10px 10px rgb(233, 229, 222);
+  box-shadow: 0px 0px 20px rgb(0 86 203 / 34%);
 }
 
 .header {
