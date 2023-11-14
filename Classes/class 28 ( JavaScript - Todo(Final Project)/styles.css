@@ -30,6 +30,10 @@ body {
 
 .hero-section {
   /* border: 1px solid white; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .signup-btn {
@@ -84,3 +88,5 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+/* Login Page */
