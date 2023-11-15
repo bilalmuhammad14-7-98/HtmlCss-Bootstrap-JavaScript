@@ -1,5 +1,5 @@
 body {
-  /* background-color: #232d48 !important; */
+  background-color: #8758ff !important;
 }
 
 .navbar-main {
@@ -17,11 +17,11 @@ body {
 }
 
 .navbar-nav {
-  margin-top: 24px !important;
+  /* margin-top: 24px !important; */
 }
 
 .nav-item {
-  margin-bottom: 8px !important;
+  /* margin-bottom: 8px !important; */
 }
 
 .nav-link {
@@ -47,4 +47,23 @@ body {
 
 .welcome-username {
   color: white;
+}
+
+.todolist-container {
+  width: 60%;
+  margin: auto;
+  background-color: #1a1a40;
+  margin-top: 48px;
+  height: 200px;
+  border-radius: 20px;
+  /* height: 100vh; */
+}
+
+.todo-col {
+  border: 1px solid wheat;
+}
+
+.addtask-btn {
+  background-color: #8758ff !important;
+  color: white !important;
 }
