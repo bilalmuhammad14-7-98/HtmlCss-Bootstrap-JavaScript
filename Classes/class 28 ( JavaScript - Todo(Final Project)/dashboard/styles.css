@@ -50,13 +50,21 @@ body {
 }
 
 .todolist-container {
-  width: 60%;
+  width: 50%;
   margin: auto;
   background-color: #1a1a40;
   margin-top: 48px;
   /* height: 200px; */
   border-radius: 20px;
+  padding: 48px 24px;
   /* height: 100vh; */
+}
+
+.listoftodo {
+  max-height: 300px !important;
+  overflow: scroll !important;
+  /* overflow-y: hidden; */
+  overflow-x: hidden !important;
 }
 
 .todo-col {
