@@ -32,6 +32,7 @@
                 placeholder="Username"
                 aria-label="Username"
                 aria-describedby="basic-addon1"
+                id="username"
               />
             </div>
 
@@ -45,6 +46,7 @@
                 placeholder="Email"
                 aria-label="Username"
                 aria-describedby="basic-addon1"
+                id="email"
               />
             </div>
 
@@ -53,11 +55,12 @@
                 ><i class="bi bi-lock"></i
               ></span>
               <input
-                type="text"
+                type="password"
                 class="form-control"
                 placeholder="Password"
                 aria-label="Username"
                 aria-describedby="basic-addon1"
+                id="password"
               />
             </div>
 
@@ -66,15 +69,20 @@
                 ><i class="bi bi-lock-fill"></i
               ></span>
               <input
-                type="text"
+                type="password"
                 class="form-control"
                 placeholder="Confirm Password"
                 aria-label="Username"
                 aria-describedby="basic-addon1"
+                id="confirmPassword"
               />
             </div>
 
-            <button type="button" class="btn btn-primary login-btn">
+            <button
+              type="button"
+              class="btn btn-primary login-btn"
+              onclick="handleSignUp()"
+            >
               Register
 
               <i class="bi bi-shield-lock-fill"></i>
