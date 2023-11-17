@@ -20,6 +20,10 @@ function addTask() {
   var listitem = document.getElementById("todo-item");
   var inpVal = inp.value;
 
+  if (!inpVal) {
+    return alert("Please add a task");
+  }
+
   getUl.innerHTML += `<li
                 class="list-group-item d-flex justify-content-between align-items-center"
                 id="todo-item"
@@ -36,7 +40,7 @@ function addTask() {
                   <button
                     type="button"
                     class="btn btn-primary trash-btn"
-                    onclick="location.href='../dashboard/dashboard.html'"
+                    onclick="handledelete(this)"
                   >
                     <i class="bi bi-trash-fill"></i>
                   </button>
@@ -44,11 +48,20 @@ function addTask() {
               </li>`;
 
   console.log(inpVal, listitem, "inpVal");
+  inp.value = "";
 }
 
 function edit(e) {
   var value = e.parentNode.parentNode.firstChild.textContent;
   var newText = prompt("Please enter the new text", value);
+
+  if (newText == null) {
+    return (e.parentNode.parentNode.firstChild.textContent = value);
+  }
   console.log(newText, "edit");
   e.parentNode.parentNode.firstChild.textContent = newText;
+}
+
+function handledelete(e) {
+  e.parentNode.parentNode.remove();
 }
