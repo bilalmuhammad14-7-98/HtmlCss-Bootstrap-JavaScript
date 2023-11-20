@@ -128,14 +128,29 @@ function edit(e) {
   var value = currentTodo[0].todo;
   var newText = prompt("Please enter the new text", value);
 
-  // if (newText == null) {
-  //   return (e.parentNode.parentNode.firstChild.textContent = value);
-  // }
+  if (newText == null) {
+    return (currentTodo[0].todo = value);
+  }
 
-  // var todos = JSON.parse(localStorage.getItem("todos"));
+  var todos = JSON.parse(localStorage.getItem("todos"));
+  console.log(todos, "all todos");
   // var currentUserTodos = todos.filter(function (data) {
   //   return data.user_id == currentUser.id;
   // });
+
+  const index = todos.findIndex((obj) => {
+    return obj.todo_id === e;
+  });
+  console.log(index, "index");
+
+  if (index !== -1) {
+    todos[index].todo = newText;
+  }
+
+  console.log(todos, "after update");
+
+  localStorage.setItem("todos", JSON.stringify(todos));
+  location.reload();
 
   // console.log(currentUserTodos, "currentUserTodos");
   // console.log(newText, "edit");
