@@ -47,4 +47,29 @@ function handleSignUp() {
   }
 
   localStorage.setItem("users", JSON.stringify(userData));
+
+  document.getElementById("username").value = "";
+  document.getElementById("email").value = "";
+  document.getElementById("password").value = "";
+  document.getElementById("confirmPassword").value = "";
+}
+
+function handleLogin() {
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
+  var userData = JSON.parse(localStorage.getItem("users"));
+  console.log(userData, "userData---");
+  console.log(email, password, "data---");
+
+  const foundUser = userData.find(function (user) {
+    return user.email == email && user.password == password;
+  });
+
+  if (foundUser) {
+    console.log(foundUser, "foundUser---");
+    localStorage.setItem("currentUser", JSON.stringify(foundUser));
+    location.href = "../dashboard/dashboard.html";
+  } else {
+    alert("Invalid Credentials");
+  }
 }

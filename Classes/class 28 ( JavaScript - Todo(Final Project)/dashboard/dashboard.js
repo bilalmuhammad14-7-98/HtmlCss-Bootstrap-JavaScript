@@ -1,5 +1,8 @@
 var getUl = document.getElementById("todo-ul");
 
+var currentUser = JSON.parse(localStorage.getItem("currentUser"));
+document.getElementById("loginuser").innerHTML = currentUser.username;
+
 function addTask() {
   console.log("add task");
   // get attribute - returns value of that attribute
@@ -64,4 +67,9 @@ function edit(e) {
 
 function handledelete(e) {
   e.parentNode.parentNode.remove();
+}
+
+function handleLogout() {
+  localStorage.removeItem("currentUser");
+  location.href = "../index.html";
 }

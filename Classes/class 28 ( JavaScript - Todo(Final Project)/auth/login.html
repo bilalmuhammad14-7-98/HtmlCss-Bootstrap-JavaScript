@@ -33,9 +33,10 @@
               <input
                 type="text"
                 class="form-control"
-                placeholder="Username"
+                placeholder="Email"
                 aria-label="Username"
                 aria-describedby="basic-addon1"
+                id="email"
               />
             </div>
 
@@ -44,18 +45,19 @@
                 ><i class="bi bi-person-fill-lock"></i
               ></span>
               <input
-                type="text"
+                type="password"
                 class="form-control"
                 placeholder="Password"
                 aria-label="Username"
                 aria-describedby="basic-addon1"
+                id="password"
               />
             </div>
 
             <button
               type="button"
               class="btn btn-primary login-btn"
-              onclick="location.href='../dashboard/dashboard.html'"
+              onclick="handleLogin()"
             >
               Login
 
