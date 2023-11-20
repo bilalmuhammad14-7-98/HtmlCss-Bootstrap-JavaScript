@@ -10,16 +10,19 @@ var currentUserTodos = todos.filter(function (data) {
 
 console.log(currentUserTodos, "currentUserTodos");
 
-getUl.innerHTML = currentUserTodos.map(function (data) {
-  console.log(data.todo.slice, "data---");
-  return `<li class="list-group-item d-flex justify-content-between align-items-center"
+getUl.innerHTML =
+  currentUserTodos &&
+  currentUserTodos
+    .map(function (data) {
+      console.log(data, "data--");
+      return `<li class="list-group-item d-flex justify-content-between align-items-center"
                 id="todo-item">${data.todo}<div
                   class="buttons-group d-flex justify-content-center align-items-center"
                 >
                   <button
                     type="button"
                     class="btn btn-primary edit-btn"
-                    onclick="edit(this)"
+                    onclick="edit(${data.todo_id})"
                   >
                     <i class="bi bi-pencil-square"></i>
                   </button>
@@ -32,7 +35,8 @@ getUl.innerHTML = currentUserTodos.map(function (data) {
                   </button>
                 </div>
               </li>`;
-});
+    })
+    .join("");
 
 function addTask() {
   console.log("add task");
@@ -112,14 +116,30 @@ function addTask() {
 }
 
 function edit(e) {
-  var value = e.parentNode.parentNode.firstChild.textContent;
+  console.log(e, "edit value");
+  var todos = JSON.parse(localStorage.getItem("todos"));
+  var currentTodo = todos.filter(function (data) {
+    return data.todo_id == e;
+  });
+
+  console.log(currentTodo[0].todo, "currentTodo");
+
+  // var value = e.parentNode.parentNode.firstChild.textContent;
+  var value = currentTodo[0].todo;
   var newText = prompt("Please enter the new text", value);
 
-  if (newText == null) {
-    return (e.parentNode.parentNode.firstChild.textContent = value);
-  }
-  console.log(newText, "edit");
-  e.parentNode.parentNode.firstChild.textContent = newText;
+  // if (newText == null) {
+  //   return (e.parentNode.parentNode.firstChild.textContent = value);
+  // }
+
+  // var todos = JSON.parse(localStorage.getItem("todos"));
+  // var currentUserTodos = todos.filter(function (data) {
+  //   return data.user_id == currentUser.id;
+  // });
+
+  // console.log(currentUserTodos, "currentUserTodos");
+  // console.log(newText, "edit");
+  // e.parentNode.parentNode.firstChild.textContent = newText;
 }
 
 function handledelete(e) {
