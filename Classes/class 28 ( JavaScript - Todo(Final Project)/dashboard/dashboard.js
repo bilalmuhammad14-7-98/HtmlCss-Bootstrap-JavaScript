@@ -29,7 +29,7 @@ getUl.innerHTML =
                   <button
                     type="button"
                     class="btn btn-primary trash-btn"
-                    onclick="handledelete(this)"
+                    onclick="handledelete(${data.todo_id})"
                   >
                     <i class="bi bi-trash-fill"></i>
                   </button>
@@ -158,7 +158,17 @@ function edit(e) {
 }
 
 function handledelete(e) {
-  e.parentNode.parentNode.remove();
+  // e.parentNode.parentNode.remove();
+  console.log(e, "delete value");
+  var todos = JSON.parse(localStorage.getItem("todos"));
+
+  var newTodos = todos.filter(function (todo) {
+    return todo.todo_id != e;
+  });
+
+  console.log(newTodos, "after delete");
+  localStorage.setItem("todos", JSON.stringify(newTodos));
+  location.reload();
 }
 
 function handleLogout() {
