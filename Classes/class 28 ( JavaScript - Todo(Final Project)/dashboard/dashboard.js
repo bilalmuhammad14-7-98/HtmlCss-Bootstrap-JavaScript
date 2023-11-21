@@ -112,6 +112,7 @@ function addTask() {
               </li>`;
 
   console.log(inpVal, listitem, "inpVal");
+  swal("Good job!", "Task Addded Successfully!", "success");
   inp.value = "";
 }
 
@@ -133,6 +134,7 @@ function edit(e) {
   }
 
   var todos = JSON.parse(localStorage.getItem("todos"));
+
   console.log(todos, "all todos");
   // var currentUserTodos = todos.filter(function (data) {
   //   return data.user_id == currentUser.id;
@@ -150,8 +152,10 @@ function edit(e) {
   console.log(todos, "after update");
 
   localStorage.setItem("todos", JSON.stringify(todos));
-  location.reload();
-
+  swal("Good job!", "Todo Edited Successfully!", "success");
+  setTimeout(() => {
+    location.reload();
+  }, 3000);
   // console.log(currentUserTodos, "currentUserTodos");
   // console.log(newText, "edit");
   // e.parentNode.parentNode.firstChild.textContent = newText;
@@ -168,10 +172,17 @@ function handledelete(e) {
 
   console.log(newTodos, "after delete");
   localStorage.setItem("todos", JSON.stringify(newTodos));
-  location.reload();
+  swal("Good job!", "Todo Deleted Successfully!", "success");
+  setTimeout(() => {
+    location.reload();
+  }, 3000);
 }
 
 function handleLogout() {
   localStorage.removeItem("currentUser");
-  location.href = "../index.html";
+  swal("Good job!", "User Logout Successfully!", "success");
+
+  setTimeout(() => {
+    location.href = "../index.html";
+  }, 3000);
 }

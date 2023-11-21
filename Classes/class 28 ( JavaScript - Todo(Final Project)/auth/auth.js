@@ -6,17 +6,21 @@ function handleSignUp() {
   var confirmPassword = document.getElementById("confirmPassword").value;
 
   if (!username || !email || !password || !confirmPassword) {
-    alert("Please fill all fields");
+    swal("Error!", "Please fill all fields!", "error");
     return;
   }
 
   if (password.length < 6) {
-    alert("Your password must be at least 6 characters long");
+    swal(
+      "Error!",
+      "Your password must be at least 6 characters long!",
+      "error"
+    );
     return;
   }
 
   if (password !== confirmPassword) {
-    alert("Passwords do not match");
+    swal("Error!", "Passwords do not match!", "error");
     return;
   }
 
@@ -46,6 +50,7 @@ function handleSignUp() {
     userData.push(currentUser);
   }
 
+  swal("Good job!", "User Signed-Up Successfully!", "success");
   localStorage.setItem("users", JSON.stringify(userData));
 
   document.getElementById("username").value = "";
@@ -67,9 +72,11 @@ function handleLogin() {
 
   if (foundUser) {
     console.log(foundUser, "foundUser---");
-    swal("Good job!", "User Logged In Successfully!", "success");
+    swal("Good job!", "User Sign-In Successfully!", "success");
     localStorage.setItem("currentUser", JSON.stringify(foundUser));
-    location.href = "../dashboard/dashboard.html";
+    setTimeout(() => {
+      location.href = "../dashboard/dashboard.html";
+    }, 4000);
   } else {
     // alert("Invalid Credentials");+
     swal("Error!", "Invalid Credentials!", "error");
