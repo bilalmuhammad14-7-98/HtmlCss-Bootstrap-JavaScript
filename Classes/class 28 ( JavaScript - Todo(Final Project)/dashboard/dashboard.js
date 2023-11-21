@@ -2,7 +2,7 @@ var getUl = document.getElementById("todo-ul");
 
 var currentUser = JSON.parse(localStorage.getItem("currentUser"));
 document.getElementById("loginuser").innerHTML = currentUser.username;
-
+// swal("Good job!", `${currentUser.username} Logged In Successfully!`, "success");
 var todos = JSON.parse(localStorage.getItem("todos"));
 var currentUserTodos = todos.filter(function (data) {
   return data.user_id == currentUser.id;

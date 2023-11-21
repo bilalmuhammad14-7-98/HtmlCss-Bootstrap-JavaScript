@@ -1,5 +1,5 @@
 body {
-  background-color: #8758ff !important;
+  background-color: #e3f2fd !important;
 }
 
 .navbar-main {
@@ -34,6 +34,7 @@ body {
   color: white !important;
   background-color: #ef296b !important;
   padding: 8px 16px !important;
+  cursor: pointer;
   /* margin-right: 10px !important; */
 }
 
@@ -52,11 +53,12 @@ body {
 .todolist-container {
   width: 50%;
   margin: auto;
-  background-color: #1a1a40;
+  background-color: #ffffff;
   margin-top: 48px;
   /* height: 200px; */
   border-radius: 20px;
   padding: 48px 24px;
+  box-shadow: 0px 0px 16px 1px powderblue;
   /* height: 100vh; */
 }
 
@@ -72,16 +74,18 @@ body {
 }
 
 .addtask-btn {
-  background-color: #8758ff !important;
+  background-color: #4070f4 !important;
   color: white !important;
+  border: none !important;
 }
 
 .list-group-item {
-  background-color: #8758ff !important;
-  color: white !important;
-  font-weight: 600 !important;
+  background-color: #f2f2f2 !important;
+  color: #060000 !important;
+  font-weight: 400 !important;
   border: none !important;
-  margin-bottom: 10px !important;
+  margin-bottom: 16px !important;
+  box-shadow: 0px 0px 4px 1px powderblue;
 }
 
 .edit-btn,
@@ -90,7 +94,12 @@ body {
   border: none !important;
 }
 
-.bi-pencil-square,
+.bi-pencil-square {
+  font-size: 24px !important;
+  color: royalblue;
+}
+
 .bi-trash-fill {
   font-size: 24px !important;
+  color: crimson;
 }

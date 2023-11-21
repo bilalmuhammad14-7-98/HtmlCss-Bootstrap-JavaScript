@@ -67,9 +67,11 @@ function handleLogin() {
 
   if (foundUser) {
     console.log(foundUser, "foundUser---");
+    swal("Good job!", "User Logged In Successfully!", "success");
     localStorage.setItem("currentUser", JSON.stringify(foundUser));
     location.href = "../dashboard/dashboard.html";
   } else {
-    alert("Invalid Credentials");
+    // alert("Invalid Credentials");+
+    swal("Error!", "Invalid Credentials!", "error");
   }
 }
