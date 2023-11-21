@@ -103,3 +103,9 @@ body {
   font-size: 24px !important;
   color: crimson;
 }
+
+@media screen and (max-width: 767px) and (min-width: 300px) {
+  .todolist-container {
+    width: 98%;
+  }
+}

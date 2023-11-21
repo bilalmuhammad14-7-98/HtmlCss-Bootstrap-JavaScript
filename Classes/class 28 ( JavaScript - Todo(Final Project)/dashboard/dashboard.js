@@ -112,7 +112,10 @@ function addTask() {
               </li>`;
 
   console.log(inpVal, listitem, "inpVal");
-  swal("Good job!", "Task Addded Successfully!", "success");
+  swal("Good job!", "Todo Added Successfully!", "success");
+  setTimeout(() => {
+    location.reload();
+  }, 2000);
   inp.value = "";
 }
 
@@ -155,7 +158,7 @@ function edit(e) {
   swal("Good job!", "Todo Edited Successfully!", "success");
   setTimeout(() => {
     location.reload();
-  }, 3000);
+  }, 2000);
   // console.log(currentUserTodos, "currentUserTodos");
   // console.log(newText, "edit");
   // e.parentNode.parentNode.firstChild.textContent = newText;
@@ -165,7 +168,6 @@ function handledelete(e) {
   // e.parentNode.parentNode.remove();
   console.log(e, "delete value");
   var todos = JSON.parse(localStorage.getItem("todos"));
-
   var newTodos = todos.filter(function (todo) {
     return todo.todo_id != e;
   });
@@ -175,7 +177,7 @@ function handledelete(e) {
   swal("Good job!", "Todo Deleted Successfully!", "success");
   setTimeout(() => {
     location.reload();
-  }, 3000);
+  }, 2000);
 }
 
 function handleLogout() {
