@@ -7,6 +7,9 @@ function App() {
   const [index, setIndex] = useState(0);
   const [currentIndexData, setCurrentIndexData] = useState();
   const [options, setOptions] = useState([]);
+  const [marks, setMarks] = useState(0);
+  const [correctAnswer, setCorrectAnswer] = useState("");
+
   useEffect(function () {
     getQuestions();
   }, []);
@@ -32,6 +35,7 @@ function App() {
     if (currentIndexData) {
       console.log(currentIndexData, "currentIndexData------------->");
       let correctAnswer = currentIndexData.correctAnswer;
+
       let incorrectAnswers = currentIndexData.incorrectAnswers;
       const updatedArray = [...incorrectAnswers, correctAnswer];
       console.log(updatedArray, "updateArray------------");
@@ -47,6 +51,15 @@ function App() {
 
   function handleNext() {
     setIndex((prev) => prev + 1);
+    console.log(correctAnswer, "userSelectedAnswer----------");
+    console.log(currentIndexData.correctAnswer, "correctAnswer----------");
+
+    if (correctAnswer == currentIndexData.correctAnswer) {
+      console.log("sai jawab");
+      setMarks((prev) => prev + 10);
+    } else {
+      console.log("galat jawab");
+    }
   }
 
   function handleRestart() {
@@ -55,17 +68,20 @@ function App() {
 
   function handleAnswer(answer) {
     console.log(answer, "answer");
+    setCorrectAnswer(answer);
   }
 
   return (
     <div className="App">
       <header className="App-header">
         <h1>Quiz Applicaiton</h1>
-
+        <h4>Marks - {marks}</h4>
         {questions.length ? (
           <>
             <h2>
-              Q-{index + 1}
+              {"Q-"}
+              {index + 1}
+              {") "}
               {questions[index].question.text}
             </h2>
           </>
@@ -86,7 +102,8 @@ function App() {
                     name="drone"
                     value={item}
                     onChange={() => handleAnswer(item)}
-                    defaultChecked={index === 0} // Check the first radio button by default
+                    // defaultChecked={index === 0} // Check the first radio button by default
+                    checked={item == correctAnswer}
                   />
                   <label htmlFor={index}>{item}</label>
                 </span>
