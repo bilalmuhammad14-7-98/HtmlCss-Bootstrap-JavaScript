@@ -9,6 +9,7 @@ function App() {
   const [options, setOptions] = useState([]);
   const [marks, setMarks] = useState(0);
   const [correctAnswer, setCorrectAnswer] = useState("");
+  const [scorePage, setScorePage] = useState(false);
 
   useEffect(function () {
     getQuestions();
@@ -60,10 +61,26 @@ function App() {
     } else {
       console.log("galat jawab");
     }
+
+    console.log(index, questions.length - 1);
+  }
+
+  function handleScore() {
+    console.log("hello -----");
+    setScorePage(true);
+
+    if (correctAnswer == currentIndexData.correctAnswer) {
+      console.log("sai jawab");
+      setMarks((prev) => prev + 10);
+    } else {
+      console.log("galat jawab");
+    }
   }
 
   function handleRestart() {
     setIndex(0);
+    setScorePage(false);
+    setMarks(0);
   }
 
   function handleAnswer(answer) {
@@ -75,49 +92,96 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Quiz Applicaiton</h1>
-        <h4>Marks - {marks}</h4>
-        {questions.length ? (
+        {scorePage ? (
           <>
-            <h2>
-              {"Q-"}
-              {index + 1}
-              {") "}
-              {questions[index].question.text}
-            </h2>
+            <h1>Well Done. You completed your assessment</h1>
+            <h2>Your total marks are: {marks}</h2>
+
+            <button
+              onClick={handleRestart}
+              style={{
+                padding: "10px 36px",
+                borderRadius: "12px",
+                marginTop: "30px",
+                backgroundColor: "cornsilk",
+                fontSize: "22px",
+                fontWeight: 800,
+                cursor: "pointer",
+              }}
+            >
+              Restart
+            </button>
           </>
         ) : (
           <>
-            <h2>Loading...........</h2>
-          </>
-        )}
-
-        {options &&
-          options.map((item, index) => {
-            return (
+            {questions.length ? (
               <>
-                <span key={index}>
-                  <input
-                    type="radio"
-                    id={index}
-                    name="drone"
-                    value={item}
-                    onChange={() => handleAnswer(item)}
-                    // defaultChecked={index === 0} // Check the first radio button by default
-                    checked={item == correctAnswer}
-                  />
-                  <label htmlFor={index}>{item}</label>
-                </span>
+                <h2>
+                  {"Q-"}
+                  {index + 1}
+                  {") "}
+                  {questions[index].question.text}
+                </h2>
               </>
-            );
-          })}
+            ) : (
+              <>
+                <h2>Loading...........</h2>
+              </>
+            )}
 
-        {index == questions.length - 1 ? (
-          <>
-            <button onClick={handleRestart}>Restart</button>
-          </>
-        ) : (
-          <>
-            <button onClick={handleNext}>NEXT</button>
+            {options &&
+              options.map((item, index) => {
+                return (
+                  <>
+                    <span key={index}>
+                      <input
+                        type="radio"
+                        id={index}
+                        name="drone"
+                        value={item}
+                        onChange={() => handleAnswer(item)}
+                        // defaultChecked={index === 0} // Check the first radio button by default
+                        checked={item == correctAnswer}
+                      />
+                      <label htmlFor={index}>{item}</label>
+                    </span>
+                  </>
+                );
+              })}
+
+            <button
+              onClick={index == questions.length - 1 ? handleScore : handleNext}
+              style={{
+                padding: "10px 36px",
+                borderRadius: "12px",
+                marginTop: "30px",
+                backgroundColor: "cornsilk",
+                fontSize: "22px",
+                fontWeight: 800,
+                cursor: "pointer",
+              }}
+            >
+              NEXT
+            </button>
+
+            {index == questions.length - 1 && (
+              <>
+                <button
+                  onClick={handleRestart}
+                  style={{
+                    padding: "10px 36px",
+                    borderRadius: "12px",
+                    marginTop: "30px",
+                    backgroundColor: "cornsilk",
+                    fontSize: "22px",
+                    fontWeight: 800,
+                    cursor: "pointer",
+                  }}
+                >
+                  Restart
+                </button>
+              </>
+            )}
           </>
         )}
       </header>
