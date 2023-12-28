@@ -32,6 +32,10 @@ function App() {
       });
   }
 
+  function shuffle(array) {
+    return array.sort(() => Math.random() - 0.5);
+  }
+
   useEffect(() => {
     if (currentIndexData) {
       console.log(currentIndexData, "currentIndexData------------->");
@@ -40,7 +44,16 @@ function App() {
       let incorrectAnswers = currentIndexData.incorrectAnswers;
       const updatedArray = [...incorrectAnswers, correctAnswer];
       console.log(updatedArray, "updateArray------------");
-      setOptions(updatedArray);
+
+      let suffledaArr = shuffle(updatedArray);
+      console.log(suffledaArr, "suffledaArr------------");
+      setOptions(suffledaArr);
+
+      // if (updatedArray) {
+      //   let shuffledAnswer = updatedArray.sort(() => Math.random() - 0.5);
+      //   console.log(shuffledAnswer, "shuffledAnswer------------");
+      //   setOptions(shuffledAnswer);
+      // }
     }
   }, [currentIndexData]);
 
