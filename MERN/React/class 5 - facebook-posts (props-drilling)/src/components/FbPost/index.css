@@ -1,8 +1,11 @@
 .fb-post {
-  width: 60%;
+  width: 50%;
   margin: auto;
-  border: 1px solid brown;
+  /* border: 1px solid brown; */
+  background-color: #ffffff;
 }
+
+/* Header styles */
 
 .fb-post-header {
   display: flex;
@@ -39,6 +42,19 @@
   font-family: sans-serif;
   font-weight: 400;
   color: darkgrey;
+}
+
+/* Description Styles */
+
+.fb-post-description p {
+  text-align: start;
+  margin-left: 16px;
+  font-style: normal;
+  font-family: auto;
+  word-spacing: 2px;
+  font-size: 20px;
+  color: darkslategray;
+  font-weight: 500;
 }
 
 .App-logo {

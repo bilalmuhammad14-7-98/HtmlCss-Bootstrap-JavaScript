@@ -18,6 +18,13 @@ function FbPost() {
           </div>
         </div>
       </div>
+
+      <div className="fb-post-description">
+        <p>
+          Style and speed. Stand out on HD video calls backed by Studio Mics.
+          Capture ideas on the vibrant touchscreen.
+        </p>
+      </div>
     </div>
   );
 }
