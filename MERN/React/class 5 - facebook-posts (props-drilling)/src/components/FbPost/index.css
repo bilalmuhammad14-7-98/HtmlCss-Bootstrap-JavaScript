@@ -3,45 +3,45 @@
   margin: auto;
   /* border: 1px solid brown; */
   background-color: #ffffff;
+  padding: 16px;
 }
 
 /* Header styles */
 
 .fb-post-header {
-  display: flex;
-  flex-direction: row;
+  display: flex !important;
+  flex-direction: row !important;
 }
 
 .header-img {
-  display: flex;
-  justify-content: center;
-  align-items: normal;
-  margin-right: 10px;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: normal !important;
+  margin-right: 10px !important;
 }
 
 .header-title {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  line-height: 1px;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: start !important;
 }
 
 .title-text {
-  color: cornflowerblue;
-  font-weight: 700;
+  color: cornflowerblue !important;
+  font-weight: 700 !important;
 }
 
 .title-with-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: -10px;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin-top: -10px !important;
 }
 
 .title-with-img-text {
-  font-family: sans-serif;
-  font-weight: 400;
-  color: darkgrey;
+  font-family: sans-serif !important;
+  font-weight: 400 !important;
+  color: darkgrey !important;
 }
 
 /* Description Styles */

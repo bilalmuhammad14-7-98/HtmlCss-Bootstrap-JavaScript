@@ -4,8 +4,7 @@ import FbPost from "./components/FbPost";
 function App() {
   return (
     <div className="App">
-      <h2>FaceBook</h2>
-
+      <h1>Facebook Posts</h1>
       <FbPost />
     </div>
   );
