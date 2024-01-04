@@ -105,6 +105,27 @@
   margin-right: 4px;
 }
 
+.like-button {
+  position: relative;
+  display: inline-block;
+}
+
+.emoji-container {
+  position: absolute;
+  top: -30px; /* Adjust the positioning based on your design */
+  left: 0;
+  background-color: #fff; /* Adjust background color as needed */
+  border: 1px solid #ccc; /* Adjust border styles as needed */
+  padding: 5px;
+  border-radius: 5px;
+  display: flex;
+  gap: 5px;
+}
+
+.emoji-container span {
+  font-size: 1.2em;
+}
+
 .App-logo {
   width: 50px;
   height: 50px;
