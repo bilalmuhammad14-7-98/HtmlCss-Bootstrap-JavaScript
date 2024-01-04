@@ -4,6 +4,9 @@
   /* border: 1px solid brown; */
   background-color: #ffffff;
   padding: 16px;
+  box-shadow: 0px 1px 13px 4px rgb(0 0 0 / 6%);
+  border-radius: 10px;
+  margin-bottom: 32px;
 }
 
 /* Header styles */
@@ -39,8 +42,9 @@
 }
 
 .title-with-img p {
-  margin: 0; /* Remove default margin for <p> element */
-  /* margin-left: 5px; Adjust as needed for spacing between text and icon */
+  margin: 0;
+  font-weight: 700;
+  margin-right: 10px;
 }
 
 .img-circle {
@@ -57,11 +61,11 @@
 
 .fb-post-description p {
   text-align: start;
-  margin-left: 16px;
+  /* margin-left: 16px; */
   font-style: normal;
   font-family: auto;
   word-spacing: 2px;
-  font-size: 20px;
+  font-size: 16px;
   color: darkslategray;
   font-weight: 500;
 }

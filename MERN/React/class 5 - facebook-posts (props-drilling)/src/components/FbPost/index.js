@@ -10,13 +10,13 @@ import logo from "../../logo.svg";
 // } from "@fortawesome/free-solid-svg-icons";
 // import FbImageLibrary from "react-fb-image-grid";
 
-function FbPost() {
+function FbPost(props) {
+  console.log(props, "props");
   const images = [
     "https://i.dummyjson.com/data/products/1/1.jpg",
     "https://i.dummyjson.com/data/products/1/2.jpg",
     "https://i.dummyjson.com/data/products/1/3.jpg",
     "https://i.dummyjson.com/data/products/1/4.jpg",
-    "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
   ];
 
   const handleCommentClick = () => {
@@ -35,18 +35,15 @@ function FbPost() {
     <div className="fb-post">
       <div className="fb-post-header">
         <div className="header-img">
-          <img
-            src="https://i.dummyjson.com/data/products/1/thumbnail.jpg"
-            className="App-logo"
-            alt="logo"
-          />
+          <img src={props.thumbnail} className="App-logo" alt="logo" />
         </div>
         <div className="header-title">
           <p className="title-text">
-            Shahid & Sons - Decoration & Catering Services
+            {props.brand} - {props.title}
           </p>
           <div className="title-with-img">
-            <p>Sponsored</p>
+            <p>{props.category}</p>
+            <br />
             <div className="img-circle">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -65,15 +62,14 @@ function FbPost() {
 
       <div className="fb-post-description">
         <p>
-          Style and speed. Stand out on HD video calls backed by Studio Mics.
-          Capture ideas on the vibrant touchscreen.
+          {props.description} - <b>{props.price}-Rs</b>
         </p>
       </div>
 
       <div className="fb-post-images-thumbnail">
         <div>
           <div style={{ width: "100%" }}>
-            <FbImageLibrary images={images} />
+            <FbImageLibrary images={props.images} />
           </div>
         </div>
       </div>
