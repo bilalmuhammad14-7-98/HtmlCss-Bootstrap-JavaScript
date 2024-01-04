@@ -31,9 +31,12 @@ function App() {
                   key={product.id}
                   title={product.title}
                   brand={product.brand}
+                  discountPercentage={product.discountPercentage}
                   category={product.category}
                   price={product.price}
                   thumbnail={product.thumbnail}
+                  stock={product.stock}
+                  rating={product.rating}
                   description={product.description}
                   images={product.images}
                 />

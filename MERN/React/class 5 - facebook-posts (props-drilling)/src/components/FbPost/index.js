@@ -62,8 +62,21 @@ function FbPost(props) {
       </div>
 
       <div className="fb-post-description">
+        <p>{props.description}</p>
+      </div>
+
+      <div className="fb-post-description">
         <p>
-          {props.description} - <b>{props.price}-Rs</b>
+          Price-<b>{props.price}-Rs/.</b>
+        </p>
+        <p>
+          Discount Percentage-<b>{props.discountPercentage}%</b>
+        </p>
+        <p>
+          Stock-<b>{props.stock} </b>
+        </p>
+        <p>
+          Ratings-<b>{props.rating} *</b>
         </p>
       </div>
 
