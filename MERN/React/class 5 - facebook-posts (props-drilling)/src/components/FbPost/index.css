@@ -38,6 +38,15 @@
   margin-top: -10px !important;
 }
 
+.title-with-img p {
+  margin: 0; /* Remove default margin for <p> element */
+  /* margin-left: 5px; Adjust as needed for spacing between text and icon */
+}
+
+.img-circle {
+  margin-left: 3px !important;
+}
+
 .title-with-img-text {
   font-family: sans-serif !important;
   font-weight: 400 !important;
@@ -55,6 +64,41 @@
   font-size: 20px;
   color: darkslategray;
   font-weight: 500;
+}
+
+.post-buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  background-color: #f0f2f5;
+  border-top: 1px solid #dddfe2;
+  width: 97%;
+  margin: 0px 9px;
+  border-radius: 5px;
+}
+
+.post-button {
+  background-color: transparent;
+  border: none;
+  color: #606770;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+}
+
+.post-button:hover {
+  background-color: #edf0f5;
+}
+
+.post-button:not(:last-child) {
+  /* border-right: 1px solid #dddfe2; */
+}
+
+/* Add some spacing between icon and text */
+.post-button svg {
+  margin-right: 4px;
 }
 
 .App-logo {
