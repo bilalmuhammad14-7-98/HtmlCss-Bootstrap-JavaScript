@@ -2,6 +2,18 @@ import "./App.css";
 import FbPost from "./components/FbPost";
 import { useEffect, useState } from "react";
 function App() {
+  /*
+Components in terms of usage:
+1. Screenwise Component (AboutUs.js, ContactUs.js, Dashboard.js)
+folder: views / screens
+2. Reusable Component (CustomBtn.js, Card.js)
+folder: components
+*/
+
+  /*
+  Props: Parent component se Child component me data pass karna
+*/
+
   const [products, setProducts] = useState([]);
   useEffect(() => {
     getProducts();
