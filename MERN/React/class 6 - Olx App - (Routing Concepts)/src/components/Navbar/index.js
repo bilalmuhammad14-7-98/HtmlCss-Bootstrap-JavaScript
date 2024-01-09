@@ -1,7 +1,11 @@
 import React from "react";
 import "./index.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCar } from "@fortawesome/free-solid-svg-icons";
+import {
+  faAngleDown,
+  faCar,
+  faSearch,
+} from "@fortawesome/free-solid-svg-icons";
 const Navbar = () => {
   return (
     <>
@@ -109,6 +113,110 @@ const Navbar = () => {
                       <path d="M25.03 21.92v-9.35l-4.99-1.66v1.05l4 1.33v8.59h-5V7.85h-8.38v14.08h-.4v1h15.17v-1zm-6.98-11.68v11.68h-6.4V8.84h6.4z"></path>
                       <path d="M15.17 10.3h1.61v.8h-1.6zm-2.42 0h1.6v.8h-1.6zm2.42 1.6h1.61v.81h-1.6zm-2.42 0h1.6v.81h-1.6zm2.42 2.42h1.61v.81h-1.6zm-2.42 0h1.6v.81h-1.6zm2.42 1.62h1.61v.8h-1.6zm-2.42 0h1.6v.8h-1.6zm2.42 2.42h1.61v.8h-1.6zm-2.42 0h1.6v.8h-1.6zm8.87-4.04h.8v.81h-.8zm-1.62 0h.8v.81H20zm1.62 1.62h.8v.8h-.8zm-1.62 0h.8v.8H20zm1.62 2.42h.8v.8h-.8zm-1.62 0h.8v.8H20z"></path>
                     </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        {/* Nav Bottom */}
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container">
+            {/* <!-- Logo on the left --> */}
+            <a class="navbar-brand-logo-bottom" href="#">
+              <svg
+                height="20"
+                viewBox="0 0 36.289 20.768"
+                alt="Logo"
+                class="logo-bottom "
+              >
+                <path d="M18.9 20.77V0h4.93v20.77zM0 10.39a8.56 8.56 0 1 1 8.56 8.56A8.56 8.56 0 0 1 0 10.4zm5.97-.01a2.6 2.6 0 1 0 2.6-2.6 2.6 2.6 0 0 0-2.6 2.6zm27 5.2l-1.88-1.87-1.87 1.88H25.9V12.3l1.9-1.9-1.9-1.89V5.18h3.27l1.92 1.92 1.93-1.92h3.27v3.33l-1.9 1.9 1.9 1.9v3.27z"></path>
+              </svg>
+            </a>
+
+            {/* <!-- Toggle button for small screens --> */}
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            {/* <!-- Links on the right --> */}
+            <div
+              class="collapse navbar-collapse justify-content-start"
+              id="navbarNav"
+            >
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <div className="input-group mb-3 search-container">
+                    <div className="input-group-prepend">
+                      <span className="input-group-text">
+                        <FontAwesomeIcon
+                          icon={faSearch}
+                          className="search-icon"
+                        />
+                      </span>
+                    </div>
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Please Search"
+                      aria-label="Search"
+                      aria-describedby="basic-addon1"
+                    />
+                    <div className="input-group-append">
+                      <span className="input-group-text">
+                        <FontAwesomeIcon icon={faAngleDown} />
+                      </span>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <div className="input-group mb-3 search-container-second">
+                    {/* <div className="input-group-prepend">
+                      <span className="input-group-text">
+                        <FontAwesomeIcon
+                          icon={faSearch}
+                          className="search-icon"
+                        />
+                      </span>
+                    </div> */}
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Please Search"
+                      aria-label="Search"
+                      aria-describedby="basic-addon1"
+                    />
+                    <div className="input-group-append second">
+                      <span className="input-group-text second-text">
+                        <FontAwesomeIcon
+                          icon={faSearch}
+                          className="search-icon"
+                        />
+                      </span>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <button aria-label="Login" class="_8e04c85e">
+                      <span class="dc64a58f be13fe44">Login</span>
+                    </button>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    Contact
                   </a>
                 </li>
               </ul>
