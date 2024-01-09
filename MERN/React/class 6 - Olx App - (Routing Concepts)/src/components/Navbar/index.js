@@ -206,18 +206,32 @@ const Navbar = () => {
                   </div>
                 </li>
 
-                <li class="nav-item">
+                <li class="nav-item login-btn-main">
                   <a class="nav-link" href="#">
-                    <button aria-label="Login" class="_8e04c85e">
+                    <button aria-label="Login" class="login-btn">
                       <span class="dc64a58f be13fe44">Login</span>
                     </button>
                   </a>
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    Contact
-                  </a>
+                  <div class="_6bd5cb3c">
+                    <button title="Sell" class="b7016787">
+                      <img
+                        src="	https://www.olx.com.pk/assets/iconSellBorder_noinline.d9eebe038fbfae9f90fd61d971037e02.svg"
+                        class="af24d916"
+                        alt="Button border"
+                      />
+                      <div class="_1075545d a662c662 _42f36e3b _96d4439a">
+                        <img
+                          src="	https://www.olx.com.pk/assets/iconPlusSell_noinline.75fc7ea23e80b50447cf5757d8ef083a.svg"
+                          class="_332d1801"
+                          alt="Plus icon"
+                        />
+                        <span class="_6d5b4928 be13fe44 _4331a6af">Sell</span>
+                      </div>
+                    </button>
+                  </div>
                 </li>
               </ul>
             </div>
