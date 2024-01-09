@@ -5,7 +5,7 @@ function Dashboard() {
   return (
     <>
       <h1>Dashboard Page</h1>
-      <div class="input-group mb-3">
+      {/* <div class="input-group mb-3">
         <span class="input-group-text" id="basic-addon1">
           <FontAwesomeIcon icon={faMagnifyingGlass} />
         </span>
@@ -23,7 +23,7 @@ function Dashboard() {
           <FontAwesomeIcon icon={faMagnifyingGlass} />
         </span>
         <input type="text" class="form-control" placeholder="Search" />
-      </div>
+      </div> */}
     </>
   );
 }

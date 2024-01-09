@@ -1,0 +1,42 @@
+.nav-main {
+  background-color: #f7f8f8;
+  position: sticky;
+  top: 0;
+  z-index: 6;
+  border-bottom: 0 solid #f2f4f5;
+}
+
+.nav-main-top {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-transition: max-width 0.25s ease-in;
+  transition: max-width 0.25s ease-in;
+  margin-top: 1rem;
+}
+
+.nav-item-motors {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: 3rem;
+}
+
+.nav-item-property {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1rem;
+}
+.navbar-brand-logo {
+  padding-bottom: 0.6rem !important;
+  fill: #3a77ff;
+  margin-left: -4rem;
+}
+
+._1a6eed8f {
+  /* width: 3.2rem;
+  height: 2rem; */
+}
