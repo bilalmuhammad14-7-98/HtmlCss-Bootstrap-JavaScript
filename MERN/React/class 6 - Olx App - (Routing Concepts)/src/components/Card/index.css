@@ -1,0 +1,42 @@
+.card:hover {
+  box-shadow: 0 0 50px #00000014;
+  cursor: pointer;
+  border: 1px solid #3a77ff;
+}
+
+.title-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.img-section {
+  height: 50%;
+}
+
+.product-img {
+  height: 180px;
+}
+
+.product-title {
+  text-align: left;
+  font-size: large;
+}
+
+.brand {
+  text-align: left;
+  font-size: 12px;
+}
+
+.updated-date {
+  text-align: left;
+}
+.ellipsis {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 3; /* Number of lines to show */
+  max-height: 3em;
+  text-align: left;
+}
