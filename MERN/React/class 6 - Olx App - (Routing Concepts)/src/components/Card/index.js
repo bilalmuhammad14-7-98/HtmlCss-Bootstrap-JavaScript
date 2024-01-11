@@ -4,10 +4,14 @@ import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
 function Card(props) {
   console.log(props, "props data----");
-  const { title, description, thumbnail, price } = props;
+  const { title, description, thumbnail, price, id } = props;
+
+  const handleNavigate = () => {
+    console.log(id, "id------");
+  };
   return (
     <>
-      <div class="card">
+      <div class="card" onClick={handleNavigate}>
         <div className="img-section">
           <img src={thumbnail} class="card-img-top product-img" alt="..." />
         </div>

@@ -31,11 +31,12 @@ function Dashboard() {
               </h4>
 
               {products.map((product) => {
-                const { title, description, thumbnail, price } = product;
+                const { title, description, thumbnail, price, id } = product;
                 return (
                   <>
                     <div class="col-12 col-md-3">
                       <Card
+                        id={id}
                         title={title}
                         description={description}
                         thumbnail={thumbnail}
