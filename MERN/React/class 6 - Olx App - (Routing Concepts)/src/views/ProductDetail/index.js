@@ -3,6 +3,8 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { Fade } from "react-slideshow-image";
 import "./index.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart, faShareNodes } from "@fortawesome/free-solid-svg-icons";
 
 function ProductDetail() {
   const [productData, setProductData] = useState();
@@ -79,7 +81,7 @@ function ProductDetail() {
         <>
           <div class="container">
             <div class="row gy-3 gx-4 mt-5">
-              <div class="col-12 col-md-6 img-container">
+              <div class="col-12 col-md-8 img-container">
                 <div className="slide-container">
                   <Fade {...properties}>
                     {productData &&
@@ -92,7 +94,7 @@ function ProductDetail() {
                               <img
                                 style={{
                                   width: "65%",
-                                  height: "450px",
+                                  height: "500px",
                                   borderRadius: "5px",
                                 }}
                                 src={fadeImage}
@@ -106,9 +108,71 @@ function ProductDetail() {
                 </div>
               </div>
 
-              <div class="col-12 col-md-6">
-                <h1>Content Section</h1>
+              <div class="col-12 col-md-4">
+                <p>
+                  {/* SIM-Free, Model A19211 6.5-inch Super Retina HD display with
+                  OLED technology A12 Bionic chip with ... */}
+                </p>
               </div>
+            </div>
+
+            <div class="row gy-1 gx-4 mt-5">
+              <div class="col-12 col-md-8 content-container">
+                {/* Top Section---------------- */}
+                <div className="top-section">
+                  <div className="top-section-price">
+                    <h1>Rs 10010</h1>
+                  </div>
+
+                  <div className="top-section-icons">
+                    <div className="icon-one">
+                      <FontAwesomeIcon icon={faShareNodes} />
+                    </div>
+                    <div className="icon-two">
+                      <FontAwesomeIcon icon={faHeart} />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Middle Section */}
+                <div className="top-section">
+                  <div className="top-section-price">
+                    <h5>Samsung Ultra Pro Max</h5>
+                  </div>
+
+                  {/* <div className="top-section-icons">
+                    <div className="icon-one">
+                      <FontAwesomeIcon icon={faShareNodes} />
+                    </div>
+                    <div className="icon-two">
+                      <FontAwesomeIcon icon={faHeart} />
+                    </div>
+                  </div> */}
+                </div>
+
+                {/* Bottom Section---------------- */}
+                <div className="top-section">
+                  <div className="top-section-price">
+                    <h6>
+                      <FontAwesomeIcon icon={faShareNodes} /> MA Jinnah Road
+                      Karachi
+                    </h6>
+                  </div>
+
+                  <div className="top-section-icons">
+                    <div className="">
+                      <p>Active 6 Days ago</p>
+                    </div>
+                    {/* <div className="icon-two">
+                      <FontAwesomeIcon icon={faHeart} />
+                    </div> */}
+                  </div>
+                </div>
+              </div>
+
+              {/* <div class="col-12 col-md-4 ">
+                <h1>Content Section</h1>
+              </div> */}
             </div>
           </div>
         </>

@@ -4,3 +4,41 @@
   border-radius: 10px;
   background-color: black;
 }
+
+.content-container {
+  border: 1px solid #d8dfe0;
+  border-radius: 5px;
+  padding: 1px 27px;
+}
+
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-section-icons {
+  display: flex;
+}
+
+.icon-one {
+  margin-right: 2rem;
+}
+
+.icon-one,
+.icon-two {
+  font-size: 28px;
+}
+
+.top-section-price h1 {
+  font-weight: 700;
+  font-size: 3.99rem;
+  line-height: 5.992rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #002f34;
+}
