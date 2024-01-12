@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import React from "react";
 import { useEffect, useState } from "react";
 import { Fade } from "react-slideshow-image";
+import "./index.css";
 
 function ProductDetail() {
   const [productData, setProductData] = useState();
@@ -89,7 +90,11 @@ function ProductDetail() {
                           <>
                             <div key={index}>
                               <img
-                                style={{ width: "100%", height: "400px" }}
+                                style={{
+                                  width: "65%",
+                                  height: "450px",
+                                  borderRadius: "5px",
+                                }}
                                 src={fadeImage}
                               />
                               {/* <h2>{fadeImage.caption}</h2> */}
