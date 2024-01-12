@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import Router from "./config/router";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
 
       <Router />
 
-      <h1>Footer</h1>
+      <Footer />
     </div>
   );
 }

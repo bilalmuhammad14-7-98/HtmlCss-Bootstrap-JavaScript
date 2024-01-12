@@ -121,7 +121,7 @@ function ProductDetail() {
                 {/* Top Section---------------- */}
                 <div className="top-section">
                   <div className="top-section-price">
-                    <h1>Rs 10010</h1>
+                    <h1>{`Rs ${productData?.price}`}</h1>
                   </div>
 
                   <div className="top-section-icons">
@@ -137,7 +137,7 @@ function ProductDetail() {
                 {/* Middle Section */}
                 <div className="top-section">
                   <div className="top-section-price">
-                    <h5>Samsung Ultra Pro Max</h5>
+                    <h5>{`${productData.title}`}</h5>
                   </div>
 
                   {/* <div className="top-section-icons">
@@ -151,11 +151,14 @@ function ProductDetail() {
                 </div>
 
                 {/* Bottom Section---------------- */}
-                <div className="top-section">
+                <div className="top-section bottom">
                   <div className="top-section-price">
                     <h6>
-                      <FontAwesomeIcon icon={faShareNodes} /> MA Jinnah Road
-                      Karachi
+                      <FontAwesomeIcon
+                        icon={faShareNodes}
+                        style={{ marginRight: "10px" }}
+                      />
+                      {`${productData.description}`}
                     </h6>
                   </div>
 
