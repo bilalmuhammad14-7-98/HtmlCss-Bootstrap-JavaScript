@@ -1,13 +1,16 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./index.css";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 
 function Card(props) {
   console.log(props, "props data----");
   const { title, description, thumbnail, price, id } = props;
+  const navigate = useNavigate();
 
   const handleNavigate = () => {
     console.log(id, "id------");
+    navigate(`/productDetail/${id}`);
   };
   return (
     <>
