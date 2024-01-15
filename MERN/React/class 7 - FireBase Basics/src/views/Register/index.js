@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { register } from "../../config/firebase";
+import { register, getData } from "../../config/firebase";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -13,6 +13,12 @@ const Register = () => {
   const signup = async () => {
     await register({ email, password, age, fullname });
     console.log({ email, password, age, fullname });
+  };
+
+  const getAllUsers = async () => {
+    const data = await getData();
+
+    console.log(data, "data------------");
   };
 
   return (
@@ -30,6 +36,7 @@ const Register = () => {
       />
       <br />
       <button onClick={signup}>Register</button>
+      <button onClick={getAllUsers}>Get Data</button>
       <p>
         Already have an account.
         <span onClick={() => navigate("/login")}>Login</span>

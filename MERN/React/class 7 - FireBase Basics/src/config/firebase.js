@@ -4,7 +4,7 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
 } from "firebase/auth";
-import { getFirestore, collection, addDoc } from "firebase/firestore";
+import { getFirestore, collection, addDoc, getDocs } from "firebase/firestore";
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyBLhK2VKXN7Yvmvk_Y46sCRT4Uvh2sLmQE",
@@ -46,4 +46,20 @@ export async function login(userInfo) {
     alert(error.message);
     return false;
   }
+}
+
+export async function getData() {
+  try {
+    let res = [];
+    const querySnapshot = await getDocs(collection(db, "users"));
+    const data = querySnapshot.forEach((doc) => {
+      // doc.data() is never undefined for query doc snapshots
+      console.log(doc.id, " => ", doc.data());
+      res.push(doc.data());
+    });
+
+    console.log(res, "data");
+
+    return res;
+  } catch (error) {}
 }
