@@ -8,8 +8,24 @@ const Login = () => {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
 
-  const signIn = () => {
-    login({ email, password });
+  const signIn = async () => {
+    const res = await login({ email, password });
+
+    if (res) {
+      navigate("/register");
+    } else {
+      alert("Login failed");
+    }
+    console.log(res, "response------");
+
+    // try {
+    //   const res = await login({ email, password });
+    //   console.log(res, "response------");
+    //   navigate("/register");
+    // } catch (error) {
+    //   console.log(error.message);
+    //   alert("please enter correct password");
+    // }
   };
   return (
     <div>

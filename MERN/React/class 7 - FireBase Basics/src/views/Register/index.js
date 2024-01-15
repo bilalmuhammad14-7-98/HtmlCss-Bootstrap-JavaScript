@@ -10,8 +10,8 @@ const Register = () => {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
 
-  const signup = () => {
-    register({ email, password, age, fullname });
+  const signup = async () => {
+    await register({ email, password, age, fullname });
     console.log({ email, password, age, fullname });
   };
 

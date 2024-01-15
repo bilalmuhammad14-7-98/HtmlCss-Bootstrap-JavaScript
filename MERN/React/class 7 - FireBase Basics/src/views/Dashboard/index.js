@@ -4,7 +4,7 @@ const Dashboard = () => {
   const navigate = useNavigate();
   return (
     <>
-      <div>Dashboard Page</div>
+      <div>Welcome brother</div>
 
       <button onClick={() => navigate("/login")}> Login</button>
       <button onClick={() => navigate("/register")}> Sign Up</button>
