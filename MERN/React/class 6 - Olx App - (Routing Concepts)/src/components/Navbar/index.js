@@ -6,6 +6,7 @@ import {
   faCar,
   faSearch,
 } from "@fortawesome/free-solid-svg-icons";
+
 const Navbar = () => {
   return (
     <>
@@ -15,7 +16,7 @@ const Navbar = () => {
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <div class="container">
             {/* <!-- Logo on the left --> */}
-            <a class="navbar-brand-logo" href="#">
+            <a class="navbar-brand-logo" href="/">
               <svg
                 height="20"
                 viewBox="0 0 36.289 20.768"
@@ -207,7 +208,7 @@ const Navbar = () => {
                 </li>
 
                 <li class="nav-item login-btn-main">
-                  <a class="nav-link" href="#">
+                  <a class="nav-link" href={`/login`}>
                     <button aria-label="Login" class="login-btn">
                       <span class="dc64a58f be13fe44">Login</span>
                     </button>
