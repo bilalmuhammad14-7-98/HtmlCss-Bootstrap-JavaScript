@@ -59,7 +59,6 @@ export async function getData() {
     });
 
     console.log(res, "data");
-
     return res;
   } catch (error) {}
 }

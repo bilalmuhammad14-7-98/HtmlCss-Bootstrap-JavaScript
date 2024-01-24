@@ -3,6 +3,13 @@
   font-weight: 700;
 }
 
+.input-field {
+  border: 0.1rem solid #002f34 !important;
+}
+
+.input-field-labels {
+  text-align: left;
+}
 .post-ad-heading-add-details {
   color: #002f34;
   font-weight: 700;
