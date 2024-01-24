@@ -10,6 +10,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { register } from "../../config/firebase";
 
 function SignUp() {
   const navigate = useNavigate();
@@ -19,9 +20,20 @@ function SignUp() {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
 
-  const signUp = () => {
-    console.log(username, dob, email, password);
-    // login({ email, password });
+  // const signUp = () => {
+  //   console.log(username, dob, email, password);
+  //   // login({ email, password });
+  // };
+
+  const signUp = async () => {
+    const res = await register({ username, dob, email, password });
+
+    if (res) {
+      navigate("/login");
+    } else {
+      alert("Signup failed. Please try again");
+    }
+    // console.log({ email, password, age, fullname });
   };
   return (
     <>

@@ -4,6 +4,7 @@ import "./index.css";
 import { faEnvelope, faLock } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { login } from "../../config/firebase";
 
 function Login() {
   const navigate = useNavigate();
@@ -11,9 +12,14 @@ function Login() {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
 
-  const signIn = () => {
-    console.log(email, password);
-    // login({ email, password });
+  const signIn = async () => {
+    const res = await login({ email, password });
+
+    if (res) {
+      navigate("/");
+    } else {
+      alert("Login failed. Please enter valid credentials");
+    }
   };
   return (
     <>
