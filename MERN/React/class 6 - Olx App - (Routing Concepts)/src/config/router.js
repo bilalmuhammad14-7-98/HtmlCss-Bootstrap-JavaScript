@@ -3,6 +3,7 @@ import Dashboard from "../views/Dashboard";
 import ProductDetail from "../views/ProductDetail";
 import Login from "../views/Login";
 import SignUp from "../views/SignUp";
+import PostAd from "../views/PostAd";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,11 @@ const router = createBrowserRouter([
   {
     path: "/signup",
     element: <SignUp />,
+  },
+
+  {
+    path: "/postAd",
+    element: <PostAd />,
   },
 ]);
 

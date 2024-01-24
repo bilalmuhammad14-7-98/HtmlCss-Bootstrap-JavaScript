@@ -217,21 +217,23 @@ const Navbar = () => {
 
                 <li class="nav-item">
                   <div class="_6bd5cb3c">
-                    <button title="Sell" class="b7016787">
-                      <img
-                        src="	https://www.olx.com.pk/assets/iconSellBorder_noinline.d9eebe038fbfae9f90fd61d971037e02.svg"
-                        class="af24d916"
-                        alt="Button border"
-                      />
-                      <div class="_1075545d a662c662 _42f36e3b _96d4439a">
+                    <a href={`/postAd`}>
+                      <button title="Sell" class="b7016787">
                         <img
-                          src="	https://www.olx.com.pk/assets/iconPlusSell_noinline.75fc7ea23e80b50447cf5757d8ef083a.svg"
-                          class="_332d1801"
-                          alt="Plus icon"
+                          src="	https://www.olx.com.pk/assets/iconSellBorder_noinline.d9eebe038fbfae9f90fd61d971037e02.svg"
+                          class="af24d916"
+                          alt="Button border"
                         />
-                        <span class="_6d5b4928 be13fe44 _4331a6af">Sell</span>
-                      </div>
-                    </button>
+                        <div class="_1075545d a662c662 _42f36e3b _96d4439a">
+                          <img
+                            src="	https://www.olx.com.pk/assets/iconPlusSell_noinline.75fc7ea23e80b50447cf5757d8ef083a.svg"
+                            class="_332d1801"
+                            alt="Plus icon"
+                          />
+                          <span class="_6d5b4928 be13fe44 _4331a6af">Sell</span>
+                        </div>
+                      </button>
+                    </a>
                   </div>
                 </li>
               </ul>

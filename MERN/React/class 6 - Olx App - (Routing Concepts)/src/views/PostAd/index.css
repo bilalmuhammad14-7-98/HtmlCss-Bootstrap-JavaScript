@@ -1,0 +1,21 @@
+.post-ad-heading {
+  color: #002f34;
+  font-weight: 700;
+}
+
+.post-ad-heading-add-details {
+  color: #002f34;
+  font-weight: 700;
+  text-align: left;
+}
+
+.post-ad-container {
+  background-color: #ffffff;
+  width: 90%;
+  margin: auto;
+  box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  padding: 10px 20px;
+  border: 1px solid rgba(0, 47, 52, 0.36);
+  border-radius: 5px;
+}
