@@ -1,5 +1,15 @@
+import { useState } from "react";
 import "./index.css";
 function PostAd() {
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [price, setPrice] = useState();
+  const [thumbnail, setThumbnail] = useState();
+
+  const handlePostAdd = () => {
+    console.log("Post data------");
+    console.log(title, description, price, thumbnail);
+  };
   return (
     <>
       <h3 className="post-ad-heading mt-5">POST YOUR AD</h3>
@@ -19,8 +29,14 @@ function PostAd() {
                 type="email"
                 class="form-control input-field"
                 id="exampleFormControlInput1"
-                placeholder="name@example.com"
+                placeholder="Please Enter Title"
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
               />
+              <div id="passwordHelpBlock" class="form-text">
+                Mention the key features of your item (e.g. brand, model, age,
+                type)
+              </div>
             </div>
           </div>
 
@@ -33,9 +49,58 @@ function PostAd() {
               class="form-control input-field"
               id="exampleFormControlTextarea1"
               rows="3"
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}
             ></textarea>
+            <div id="passwordHelpBlock" class="form-text">
+              Include condition, features and reason for selling
+            </div>
           </div>
-          <div class="row"></div>
+          <div class="row">
+            <div class="mb-3">
+              {/* <label for="exampleFormControlInput1" class="form-label">
+                Title
+              </label> */}
+              <h5 className="input-field-labels">Price</h5>
+              <input
+                type="number"
+                class="form-control input-field"
+                id="exampleFormControlInput1"
+                placeholder="Please Enter Price"
+                value={price}
+                onChange={(e) => setPrice(e.target.value)}
+              />
+              <div id="passwordHelpBlock" class="form-text">
+                Please enter the price of the product you wish to sell
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="mb-3">
+              <h5 className="input-field-labels">Upload Photo</h5>
+              <input
+                class="form-control input-field"
+                type="file"
+                id="formFile"
+                // value={title}
+                onChange={(e) => {
+                  console.log(e.target.files[0], "images--------");
+                  setThumbnail(e.target.files[0]);
+                }}
+              />
+            </div>
+          </div>
+
+          <div class="row">
+            <button
+              type="button"
+              class="btn btn-primary btn-lg post-btn"
+              onClick={handlePostAdd}
+            >
+              <span class="post-btn-text"> POST NOW</span>
+            </button>
+          </div>
         </div>
       </div>
     </>

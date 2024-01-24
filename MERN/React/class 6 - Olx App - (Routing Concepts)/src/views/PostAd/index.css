@@ -25,4 +25,17 @@
   padding: 10px 20px;
   border: 1px solid rgba(0, 47, 52, 0.36);
   border-radius: 5px;
+  margin-bottom: 150px;
+}
+
+.post-btn {
+  background-color: #002f34;
+  /* width: max-content; */
+  border: none;
+}
+
+.post-btn-text {
+  font-size: 20px;
+  font-family: system-ui;
+  font-weight: 100;
 }
