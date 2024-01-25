@@ -5,11 +5,16 @@ import { Fade } from "react-slideshow-image";
 import "./index.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faShareNodes } from "@fortawesome/free-solid-svg-icons";
+import { getDataById } from "../../config/firebase";
 
 function ProductDetail() {
   const [productData, setProductData] = useState();
   let { id } = useParams();
   console.log("ProductDetailId-------------", id);
+
+  useEffect(() => {
+    getProductsById();
+  }, []);
 
   const fadeImages = [
     {
@@ -25,6 +30,12 @@ function ProductDetail() {
       caption: "Third Slide",
     },
   ];
+
+  const getProductsById = async () => {
+    const product = await getDataById(id);
+    console.log(product, "product by id------------->");
+    setProductData(product);
+  };
 
   const buttonStyle = {
     width: "30px",
@@ -59,21 +70,21 @@ function ProductDetail() {
   };
 
   useEffect(() => {
-    getSingleProduct();
+    // getSingleProduct();
   }, []);
 
-  function getSingleProduct() {
-    fetch(`https://dummyjson.com/products/${id}`)
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (response) {
-        console.log(response, "response-----");
-        setProductData(response);
-        // setProducts(response.products);
-        // setQuestions(response);
-      });
-  }
+  // function getSingleProduct() {
+  //   fetch(`https://dummyjson.com/products/${id}`)
+  //     .then(function (response) {
+  //       return response.json();
+  //     })
+  //     .then(function (response) {
+  //       console.log(response, "response-----");
+  //       setProductData(response);
+  //       // setProducts(response.products);
+  //       // setQuestions(response);
+  //     });
+  // }
 
   return (
     <>
@@ -83,28 +94,24 @@ function ProductDetail() {
             <div class="row gy-3 gx-4 mt-5">
               <div class="col-12 col-md-8 img-container">
                 <div className="slide-container">
-                  <Fade {...properties}>
-                    {productData &&
-                      productData?.images?.map((fadeImage, index) => {
-                        console.log(fadeImage, index);
-
-                        return (
-                          <>
-                            <div key={index}>
-                              <img
-                                style={{
-                                  width: "65%",
-                                  height: "500px",
-                                  borderRadius: "5px",
-                                }}
-                                src={fadeImage}
-                              />
-                              {/* <h2>{fadeImage.caption}</h2> */}
-                            </div>
-                          </>
-                        );
-                      })}
-                  </Fade>
+                  {/* <Fade {...properties}> */}
+                  {/* return ( */}
+                  <>
+                    <div>
+                      <img
+                        style={{
+                          width: "65%",
+                          height: "500px",
+                          borderRadius: "5px",
+                        }}
+                        src={productData.thumbnail}
+                      />
+                      {/* <h2>{fadeImage.caption}</h2> */}
+                    </div>
+                  </>
+                  {/* ); */}
+                  {/* })} */}
+                  {/* </Fade> */}
                 </div>
               </div>
 

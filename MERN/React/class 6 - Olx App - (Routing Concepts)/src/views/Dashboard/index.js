@@ -2,24 +2,33 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Card from "../../components/Card";
 import { useEffect, useState } from "react";
+import { getData } from "../../config/firebase";
 
 function Dashboard() {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    getProducts();
+    // getProducts();
+    getAds();
   }, []);
 
-  function getProducts() {
-    fetch("https://dummyjson.com/products")
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (response) {
-        console.log(response.products, "response-----");
-        setProducts(response.products);
-        // setQuestions(response);
-      });
-  }
+  // function getProducts() {
+  //   fetch("https://dummyjson.com/products")
+  //     .then(function (response) {
+  //       return response.json();
+  //     })
+  //     .then(function (response) {
+  //       console.log(response.products, "response-----");
+  //       setProducts(response.products);
+  //       // setQuestions(response);
+  //     });
+  // }
+
+  const getAds = async () => {
+    const data = await getData();
+    console.log(data, "ads in component");
+    setProducts(data);
+  };
+
   return (
     <>
       {products && products.length > 0 ? (

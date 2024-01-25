@@ -6,7 +6,14 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
 } from "firebase/auth";
-import { getFirestore, collection, addDoc, getDocs } from "firebase/firestore";
+import {
+  getFirestore,
+  collection,
+  addDoc,
+  getDocs,
+  getDoc,
+  doc,
+} from "firebase/firestore";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -25,7 +32,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
+export const auth = getAuth(app);
 const db = getFirestore(app);
 const storage = getStorage(app);
 // const analytics = getAnalytics(app);
@@ -74,5 +81,42 @@ export async function postAdtoDb(ad) {
     alert("Ad Posted successfully");
   } catch (e) {
     alert(e.message);
+  }
+}
+
+export async function getData() {
+  try {
+    let res = [];
+    const querySnapshot = await getDocs(collection(db, "ads"));
+    querySnapshot.forEach((doc) => {
+      // doc.data() is never undefined for query doc snapshots
+      console.log(doc.id, " => ", doc.data());
+      const ad = doc.data();
+      ad.id = doc.id;
+      res.push(ad);
+    });
+
+    console.log(res, "data");
+
+    return res;
+  } catch (error) {
+    alert(error.message);
+  }
+}
+
+export async function getDataById(id) {
+  try {
+    let res;
+    const docRef = doc(db, "ads", id);
+    const docSnap = await getDoc(docRef);
+    if (docSnap.exists()) {
+      console.log("Document data:", docSnap.data());
+      return docSnap.data();
+    } else {
+      // docSnap.data() will be undefined in this case
+      console.log("No such document!");
+    }
+  } catch (error) {
+    alert(error.message);
   }
 }

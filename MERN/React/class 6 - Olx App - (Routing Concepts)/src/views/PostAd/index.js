@@ -14,7 +14,7 @@ function PostAd() {
     console.log("Post data------");
     console.log(title, description, price, thumbnail);
     await postAdtoDb({ title, description, price, thumbnail });
-    // navigate("/");
+    navigate("/");
   };
   return (
     <>
