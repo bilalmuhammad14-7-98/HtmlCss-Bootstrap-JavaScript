@@ -3,31 +3,36 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Card from "../../components/Card";
 import { useEffect, useState } from "react";
 import { getData } from "../../config/firebase";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "../../config/firebase";
 
 function Dashboard() {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    // getProducts();
     getAds();
   }, []);
 
-  // function getProducts() {
-  //   fetch("https://dummyjson.com/products")
-  //     .then(function (response) {
-  //       return response.json();
-  //     })
-  //     .then(function (response) {
-  //       console.log(response.products, "response-----");
-  //       setProducts(response.products);
-  //       // setQuestions(response);
-  //     });
-  // }
-
   const getAds = async () => {
     const data = await getData();
-    console.log(data, "ads in component");
     setProducts(data);
   };
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        // User is signed in, see docs for a list of available properties
+        // https://firebase.google.com/docs/reference/js/auth.user
+        // const uid = user.uid;
+        console.log(user, "user-------.");
+        // ...
+      } else {
+        // User is signed out
+        // ...
+
+        console.log("user is sign out");
+      }
+    });
+  }, []);
 
   return (
     <>

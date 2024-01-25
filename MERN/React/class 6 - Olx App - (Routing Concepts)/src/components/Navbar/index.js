@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./index.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -6,8 +6,46 @@ import {
   faCar,
   faSearch,
 } from "@fortawesome/free-solid-svg-icons";
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import { auth } from "../../config/firebase";
+import { useNavigate } from "react-router-dom";
+import { useHref } from "react-router-dom";
 
 const Navbar = () => {
+  // const navigate = useNavigate();
+  // const href = useHref();
+  const [user, setUser] = useState("");
+  const [logout, setLogout] = useState(false);
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        // User is signed in, see docs for a list of available properties
+        // https://firebase.google.com/docs/reference/js/auth.user
+        // const uid = user.uid;
+        console.log(user, "user navbar-------.");
+        setUser(user);
+        // ...
+      } else {
+        // User is signed out
+        // ...
+
+        console.log("user is sign out");
+      }
+    });
+  }, []);
+
+  const handleSignout = async () => {
+    console.log("user is sign out");
+    const res = await signOut(auth);
+    console.log(res, "sign out response-----");
+    alert("User signed out Successfully");
+    setLogout(true);
+    // href("/login");
+  };
+
+  useEffect(() => {
+    setUser(null);
+  }, [logout]);
   return (
     <>
       <header className="nav-main">
@@ -207,13 +245,32 @@ const Navbar = () => {
                   </div>
                 </li>
 
-                <li class="nav-item login-btn-main">
-                  <a class="nav-link" href={`/login`}>
-                    <button aria-label="Login" class="login-btn">
-                      <span class="dc64a58f be13fe44">Login</span>
-                    </button>
-                  </a>
-                </li>
+                {user ? (
+                  <>
+                    {" "}
+                    <li class="nav-item login-btn-main">
+                      <a class="nav-link">
+                        <button
+                          aria-label="Login"
+                          class="login-btn"
+                          onClick={handleSignout}
+                        >
+                          <span class="dc64a58f be13fe44">Logout</span>
+                        </button>
+                      </a>
+                    </li>
+                  </>
+                ) : (
+                  <>
+                    <li class="nav-item login-btn-main">
+                      <a class="nav-link" href={`/login`}>
+                        <button aria-label="Login" class="login-btn">
+                          <span class="dc64a58f be13fe44">Login</span>
+                        </button>
+                      </a>
+                    </li>
+                  </>
+                )}
 
                 <li class="nav-item">
                   <div class="_6bd5cb3c">
