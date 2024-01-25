@@ -37,24 +37,24 @@ function SignUp() {
     // console.log({ email, password, age, fullname });
   };
 
-  useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        // User is signed in, see docs for a list of available properties
-        // https://firebase.google.com/docs/reference/js/auth.user
-        // const uid = user.uid;
-        console.log(user, "user login page-----------.");
-        navigate("/");
-        // setUser(user);
-        // ...
-      } else {
-        // User is signed out
-        // ...
+  // useEffect(() => {
+  //   onAuthStateChanged(auth, (user) => {
+  //     if (user) {
+  //       // User is signed in, see docs for a list of available properties
+  //       // https://firebase.google.com/docs/reference/js/auth.user
+  //       // const uid = user.uid;
+  //       console.log(user, "user login page-----------.");
+  //       navigate("/");
+  //       // setUser(user);
+  //       // ...
+  //     } else {
+  //       // User is signed out
+  //       // ...
 
-        console.log("user is sign out");
-      }
-    });
-  }, []);
+  //       console.log("user is sign out");
+  //     }
+  //   });
+  // }, []);
   return (
     <>
       <div class="login-container">

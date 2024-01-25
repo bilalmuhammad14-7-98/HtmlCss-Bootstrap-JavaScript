@@ -75,24 +75,24 @@ function Layout() {
   //   setPath(window, location.pathname);
   // }, [window.location.pathname]);
 
-  useEffect(() => {
-    console.log("if block-----");
-    const { pathname } = window.location;
-    console.log(pathname, "pathname=-----");
+  // useEffect(() => {
+  //   console.log("if block-----");
+  //   const { pathname } = window.location;
+  //   console.log(pathname, "pathname=-----");
 
-    if (user) {
-      console.log(user, pathname, "user------");
+  //   if (user) {
+  //     console.log(user, pathname, "user------");
 
-      if (pathname === "/login" || pathname === "/signup") {
-        console.log(pathname, "inside if else");
-        navigate("/postAd");
-      }
-    } else {
-      if (pathname === "/postAd") {
-        navigate("/login");
-      }
-    }
-  }, [window.location.pathname, user]);
+  //     if (pathname === "/login" || pathname === "/signup") {
+  //       console.log(pathname, "inside if else");
+  //       navigate("/");
+  //     }
+  //   } else {
+  //     if (pathname === "/postAd") {
+  //       navigate("/login");
+  //     }
+  //   }
+  // }, [window.location.pathname, user]);
 
   return (
     <div>
