@@ -1,14 +1,20 @@
 import { useState } from "react";
 import "./index.css";
+import { postAdtoDb } from "../../config/firebase";
+import { useNavigate } from "react-router-dom";
+
 function PostAd() {
+  const navigate = useNavigate();
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState();
   const [thumbnail, setThumbnail] = useState();
 
-  const handlePostAdd = () => {
+  const handlePostAdd = async () => {
     console.log("Post data------");
     console.log(title, description, price, thumbnail);
+    await postAdtoDb({ title, description, price, thumbnail });
+    // navigate("/");
   };
   return (
     <>

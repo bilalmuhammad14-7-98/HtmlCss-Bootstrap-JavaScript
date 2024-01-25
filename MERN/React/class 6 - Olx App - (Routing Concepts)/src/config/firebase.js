@@ -7,6 +7,7 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 import { getFirestore, collection, addDoc, getDocs } from "firebase/firestore";
+import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -26,6 +27,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
+const storage = getStorage(app);
 // const analytics = getAnalytics(app);
 
 export async function register(userInfo) {
@@ -53,5 +55,24 @@ export async function login(userInfo) {
   } catch (error) {
     alert(error.message);
     return false;
+  }
+}
+
+export async function postAdtoDb(ad) {
+  try {
+    const { title, description, price, thumbnail } = ad;
+    const storageRef = ref(storage, `ads/${thumbnail.name}`);
+    await uploadBytes(storageRef, thumbnail);
+
+    const url = await getDownloadURL(storageRef);
+    await addDoc(collection(db, "ads"), {
+      title,
+      description,
+      thumbnail: url,
+      price,
+    });
+    alert("Ad Posted successfully");
+  } catch (e) {
+    alert(e.message);
   }
 }
