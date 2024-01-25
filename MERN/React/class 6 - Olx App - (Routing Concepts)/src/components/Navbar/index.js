@@ -12,7 +12,7 @@ import { useNavigate } from "react-router-dom";
 import { useHref } from "react-router-dom";
 
 const Navbar = () => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   // const href = useHref();
   const [user, setUser] = useState("");
   const [logout, setLogout] = useState(false);
@@ -40,6 +40,7 @@ const Navbar = () => {
     console.log(res, "sign out response-----");
     alert("User signed out Successfully");
     setLogout(true);
+    navigate("/login");
     // href("/login");
   };
 

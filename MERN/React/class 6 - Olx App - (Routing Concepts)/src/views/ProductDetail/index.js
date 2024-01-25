@@ -6,6 +6,7 @@ import "./index.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faShareNodes } from "@fortawesome/free-solid-svg-icons";
 import { getDataById } from "../../config/firebase";
+import Navbar from "../../components/Navbar";
 
 function ProductDetail() {
   const [productData, setProductData] = useState();
@@ -88,6 +89,7 @@ function ProductDetail() {
 
   return (
     <>
+      {/* <Navbar /> */}
       {productData ? (
         <>
           <div class="container">

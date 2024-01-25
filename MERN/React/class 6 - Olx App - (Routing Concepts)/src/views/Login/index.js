@@ -2,15 +2,35 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import LoginImage from "../../assets/images/features.png";
 import "./index.css";
 import { faEnvelope, faLock } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { login } from "../../config/firebase";
+import { auth, login } from "../../config/firebase";
+import { onAuthStateChanged } from "firebase/auth";
 
 function Login() {
   const navigate = useNavigate();
 
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        // User is signed in, see docs for a list of available properties
+        // https://firebase.google.com/docs/reference/js/auth.user
+        // const uid = user.uid;
+        console.log(user, "user login page-----------.");
+        navigate("/");
+        // setUser(user);
+        // ...
+      } else {
+        // User is signed out
+        // ...
+
+        console.log("user is sign out");
+      }
+    });
+  }, []);
 
   const signIn = async () => {
     const res = await login({ email, password });

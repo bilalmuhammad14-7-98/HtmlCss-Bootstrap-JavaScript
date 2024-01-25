@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { getData } from "../../config/firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../../config/firebase";
+import Navbar from "../../components/Navbar";
 
 function Dashboard() {
   const [products, setProducts] = useState([]);
@@ -36,6 +37,7 @@ function Dashboard() {
 
   return (
     <>
+      {/* <Navbar /> */}
       {products && products.length > 0 ? (
         <>
           <div class="container">
