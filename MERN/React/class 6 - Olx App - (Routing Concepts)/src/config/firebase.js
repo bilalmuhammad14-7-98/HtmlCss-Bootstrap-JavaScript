@@ -155,7 +155,6 @@ export async function updateUserData(data) {
       address,
     });
     alert("Updated successfully");
-    console.log(res, "update response");
   } catch (error) {
     alert(error.message);
   }

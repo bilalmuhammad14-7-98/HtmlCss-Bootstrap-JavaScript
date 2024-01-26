@@ -53,9 +53,6 @@ function UpdateUser() {
 
   return (
     <>
-      <h1>Update User Screen</h1>
-      <button onClick={updateUser}>Update</button>
-
       <h3 className="post-ad-heading mt-5">Update Profile</h3>
       <div class="post-ad-container">
         <h3 className="post-ad-heading-add-details mb-5">USER DETAILS</h3>

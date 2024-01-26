@@ -70,23 +70,6 @@ function ProductDetail() {
     ),
   };
 
-  useEffect(() => {
-    // getSingleProduct();
-  }, []);
-
-  // function getSingleProduct() {
-  //   fetch(`https://dummyjson.com/products/${id}`)
-  //     .then(function (response) {
-  //       return response.json();
-  //     })
-  //     .then(function (response) {
-  //       console.log(response, "response-----");
-  //       setProductData(response);
-  //       // setProducts(response.products);
-  //       // setQuestions(response);
-  //     });
-  // }
-
   return (
     <>
       {/* <Navbar /> */}
@@ -148,15 +131,6 @@ function ProductDetail() {
                   <div className="top-section-price">
                     <h5>{`${productData.title}`}</h5>
                   </div>
-
-                  {/* <div className="top-section-icons">
-                    <div className="icon-one">
-                      <FontAwesomeIcon icon={faShareNodes} />
-                    </div>
-                    <div className="icon-two">
-                      <FontAwesomeIcon icon={faHeart} />
-                    </div>
-                  </div> */}
                 </div>
 
                 {/* Bottom Section---------------- */}
@@ -181,39 +155,12 @@ function ProductDetail() {
                   </div>
                 </div>
               </div>
-
-              {/* <div class="col-12 col-md-4 ">
-                <h1>Content Section</h1>
-              </div> */}
             </div>
           </div>
         </>
       ) : (
         <>Loading......</>
       )}
-
-      {/* <div class="container">
-        <div class="row gy-3 gx-4 mt-5">
-          <h4 style={{ textAlign: "left" }}>Accessories & Electronic Items</h4>
-
-          {products.map((product) => {
-            const { title, description, thumbnail, price, id } = product;
-            return (
-              <>
-                <div class="col-12 col-md-3">
-                  <Card
-                    id={id}
-                    title={title}
-                    description={description}
-                    thumbnail={thumbnail}
-                    price={price}
-                  />
-                </div>
-              </>
-            );
-          })}
-        </div>
-      </div> */}
     </>
   );
 }
