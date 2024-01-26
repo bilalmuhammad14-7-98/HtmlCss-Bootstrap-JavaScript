@@ -52,6 +52,15 @@
   height: 2rem; */
 }
 
+.navbar-dropdown {
+  display: flex !important;
+  align-items: flex-start !important;
+  margin-left: 2rem !important;
+}
+
+.dropdown-btn {
+  padding: 7px 27px;
+}
 .search-container {
   border: 1px solid #ced4da; /* You can adjust the color and thickness as needed */
   border-radius: 5px; /* Adjust the border-radius for rounded corners if desired */

@@ -5,11 +5,13 @@ import {
   faAngleDown,
   faCar,
   faSearch,
+  faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../../config/firebase";
 import { useNavigate } from "react-router-dom";
 import { useHref } from "react-router-dom";
+import usericon from "../../assets/images/usericon.png";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -249,7 +251,7 @@ const Navbar = () => {
                 {user ? (
                   <>
                     {" "}
-                    <li class="nav-item login-btn-main">
+                    {/* <li class="nav-item login-btn-main">
                       <a class="nav-link">
                         <button
                           aria-label="Login"
@@ -259,7 +261,79 @@ const Navbar = () => {
                           <span class="dc64a58f be13fe44">Logout</span>
                         </button>
                       </a>
-                    </li>
+                    </li> */}
+                    <div
+                      class="collapse navbar-collapse navbar-dropdown"
+                      id="navbarNavDarkDropdown"
+                    >
+                      <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                          <button
+                            class="btn btn-dark dropdown-toggle dropdown-btn"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            {/* {user.email} */}
+                            <FontAwesomeIcon icon={faUser} />
+
+                            {/* <img src={usericon} /> */}
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-dark">
+                            <li>
+                              <a class="dropdown-item" href="#">
+                                {/* <FontAwesomeIcon icon={faUser} /> */}
+                                Update Profile
+                              </a>
+                            </li>
+                            <li>
+                              <hr class="dropdown-divider" />
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#">
+                                {/* <FontAwesomeIcon icon={faUser} /> */}
+                                My Ads
+                              </a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#">
+                                Favourites & Saved Seatches
+                              </a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#">
+                                Buy Business Packages
+                              </a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#">
+                                Bought Packages & Billing
+                              </a>
+                            </li>
+                            <li>
+                              <hr class="dropdown-divider" />
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#">
+                                Help
+                              </a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#">
+                                Settings
+                              </a>
+                            </li>
+                            <li>
+                              <hr class="dropdown-divider" />
+                            </li>
+                            <li onClick={handleSignout}>
+                              <a class="dropdown-item" href="#">
+                                Logout
+                              </a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
                   </>
                 ) : (
                   <>

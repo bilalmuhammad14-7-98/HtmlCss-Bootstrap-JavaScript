@@ -13,6 +13,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./firebase";
 import { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
+import UpdateUser from "../views/UpdateUser";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,11 @@ const router = createBrowserRouter([
       {
         path: "/postAd",
         element: <PostAd />,
+      },
+
+      {
+        path: "/updateUser",
+        element: <UpdateUser />,
       },
     ],
   },
