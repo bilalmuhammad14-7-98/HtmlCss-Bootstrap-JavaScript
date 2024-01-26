@@ -120,3 +120,23 @@ export async function getDataById(id) {
     alert(error.message);
   }
 }
+
+export async function getUsers(id) {
+  try {
+    let res = [];
+    const querySnapshot = await getDocs(collection(db, "users"));
+    querySnapshot.forEach((doc) => {
+      // doc.data() is never undefined for query doc snapshots
+      console.log(doc.id, " => ", doc.data());
+      const ad = doc.data();
+      ad.id = doc.id;
+      res.push(ad);
+    });
+
+    console.log(res, "data");
+
+    return res;
+  } catch (error) {
+    alert(error.message);
+  }
+}

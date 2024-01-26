@@ -46,6 +46,11 @@ const Navbar = () => {
     // href("/login");
   };
 
+  const handleUpdateProfile = () => {
+    // console.log(id, "id------");
+    navigate(`/updateUser/${user.email}`);
+  };
+
   useEffect(() => {
     setUser(null);
   }, [logout]);
@@ -279,7 +284,7 @@ const Navbar = () => {
                             {/* <img src={usericon} /> */}
                           </button>
                           <ul class="dropdown-menu dropdown-menu-dark">
-                            <li>
+                            <li onClick={handleUpdateProfile}>
                               <a class="dropdown-item" href="#">
                                 {/* <FontAwesomeIcon icon={faUser} /> */}
                                 Update Profile
