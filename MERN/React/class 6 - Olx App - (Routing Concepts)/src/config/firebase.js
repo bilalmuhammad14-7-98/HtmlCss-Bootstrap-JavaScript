@@ -142,13 +142,17 @@ export async function getUsers(id) {
   }
 }
 
-export async function updateUserData() {
+export async function updateUserData(data) {
   try {
-    const dataRef = doc(db, "users", "Qcof94gvjhSVQQZcMlHY");
+    const { username, email, dob, phoneNo, address, userId } = data;
+    const dataRef = doc(db, "users", userId);
     console.log(dataRef, "data-----");
     await updateDoc(dataRef, {
-      username: "rizwanbhai",
-      phoneNo: "033123123",
+      username,
+      email,
+      dob,
+      phoneNo,
+      address,
     });
     alert("Updated successfully");
     console.log(res, "update response");
