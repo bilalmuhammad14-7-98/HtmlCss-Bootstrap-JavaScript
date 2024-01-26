@@ -283,11 +283,11 @@ const Navbar = () => {
 
                             {/* <img src={usericon} /> */}
                           </button>
-                          <ul class="dropdown-menu dropdown-menu-dark">
+                          <ul class="dropdown-menu dropdown-menu-dark dropdown-main">
                             <li onClick={handleUpdateProfile}>
                               <a class="dropdown-item" href="#">
-                                {/* <FontAwesomeIcon icon={faUser} /> */}
-                                Update Profile
+                                <FontAwesomeIcon icon={faUser} />
+                                <span class="nav-text">Update Profile</span>
                               </a>
                             </li>
                             <li>
@@ -295,23 +295,31 @@ const Navbar = () => {
                             </li>
                             <li>
                               <a class="dropdown-item" href="#">
-                                {/* <FontAwesomeIcon icon={faUser} /> */}
-                                My Ads
+                                <FontAwesomeIcon icon={faUser} />
+                                <span class="nav-text">My Ads</span>
                               </a>
                             </li>
                             <li>
                               <a class="dropdown-item" href="#">
-                                Favourites & Saved Seatches
+                                <FontAwesomeIcon icon={faUser} />
+                                <span class="nav-text">
+                                  Favourites & Saved Seatches
+                                </span>
                               </a>
                             </li>
                             <li>
                               <a class="dropdown-item" href="#">
-                                Buy Business Packages
+                                <FontAwesomeIcon icon={faUser} />
+                                <span class="nav-text">
+                                  Buy Business Packages
+                                </span>
                               </a>
                             </li>
                             <li>
                               <a class="dropdown-item" href="#">
-                                Bought Packages & Billing
+                                <FontAwesomeIcon icon={faUser} />
+                                <span class="nav-text"> Bought Packages &</span>
+                                Billing
                               </a>
                             </li>
                             <li>
@@ -319,12 +327,14 @@ const Navbar = () => {
                             </li>
                             <li>
                               <a class="dropdown-item" href="#">
-                                Help
+                                <FontAwesomeIcon icon={faUser} />
+                                <span class="nav-text"> Help</span>
                               </a>
                             </li>
                             <li>
                               <a class="dropdown-item" href="#">
-                                Settings
+                                <FontAwesomeIcon icon={faUser} />
+                                <span class="nav-text"> Settings </span>
                               </a>
                             </li>
                             <li>
@@ -332,7 +342,8 @@ const Navbar = () => {
                             </li>
                             <li onClick={handleSignout}>
                               <a class="dropdown-item" href="#">
-                                Logout
+                                <FontAwesomeIcon icon={faUser} />
+                                <span class="nav-text"> Logout</span>
                               </a>
                             </li>
                           </ul>

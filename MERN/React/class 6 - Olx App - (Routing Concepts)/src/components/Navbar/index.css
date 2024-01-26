@@ -61,6 +61,22 @@
 .dropdown-btn {
   padding: 7px 27px;
 }
+
+.dropdown-item {
+  color: #020918 !important;
+}
+
+.nav-text {
+  margin-left: 3px;
+}
+.dropdown-item:hover,
+.dropdown-item:focus {
+  color: var(--bs-dropdown-link-hover-color);
+  background-color: rgb(34 9 9 / 15%);
+}
+.dropdown-main {
+  background-color: #ffff;
+}
 .search-container {
   border: 1px solid #ced4da; /* You can adjust the color and thickness as needed */
   border-radius: 5px; /* Adjust the border-radius for rounded corners if desired */
