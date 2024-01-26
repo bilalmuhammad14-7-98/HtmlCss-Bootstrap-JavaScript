@@ -13,6 +13,7 @@ import {
   getDocs,
   getDoc,
   doc,
+  updateDoc,
 } from "firebase/firestore";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 // TODO: Add SDKs for Firebase products that you want to use
@@ -136,6 +137,21 @@ export async function getUsers(id) {
     console.log(res, "data");
 
     return res;
+  } catch (error) {
+    alert(error.message);
+  }
+}
+
+export async function updateUserData() {
+  try {
+    const dataRef = doc(db, "users", "Qcof94gvjhSVQQZcMlHY");
+    console.log(dataRef, "data-----");
+    await updateDoc(dataRef, {
+      username: "rizwanbhai",
+      phoneNo: "033123123",
+    });
+    alert("Updated successfully");
+    console.log(res, "update response");
   } catch (error) {
     alert(error.message);
   }
