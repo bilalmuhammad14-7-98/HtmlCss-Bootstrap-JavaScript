@@ -40,3 +40,16 @@
   max-height: 3em;
   text-align: left;
 }
+
+.cart-icon {
+  /* color: #3a77ff; */
+}
+
+.cart-icon :hover {
+  color: #070d15;
+  font-size: 30px;
+}
+
+.heart-icon {
+  /* color: red; */
+}

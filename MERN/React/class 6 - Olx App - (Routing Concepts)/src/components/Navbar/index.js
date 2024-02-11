@@ -3,9 +3,16 @@ import "./index.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faAngleDown,
+  faBars,
   faCar,
+  faCartShopping,
+  faCircleInfo,
+  faHeart,
+  faRightFromBracket,
   faSearch,
+  faTruckFast,
   faUser,
+  faWallet,
 } from "@fortawesome/free-solid-svg-icons";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../../config/firebase";
@@ -295,13 +302,13 @@ const Navbar = () => {
                             </li>
                             <li>
                               <a class="dropdown-item" href="#">
-                                <FontAwesomeIcon icon={faUser} />
-                                <span class="nav-text">My Ads</span>
+                                <FontAwesomeIcon icon={faCartShopping} />
+                                <span class="nav-text">Cart Items</span>
                               </a>
                             </li>
                             <li>
                               <a class="dropdown-item" href="#">
-                                <FontAwesomeIcon icon={faUser} />
+                                <FontAwesomeIcon icon={faHeart} />
                                 <span class="nav-text">
                                   Favourites & Saved Seatches
                                 </span>
@@ -309,7 +316,7 @@ const Navbar = () => {
                             </li>
                             <li>
                               <a class="dropdown-item" href="#">
-                                <FontAwesomeIcon icon={faUser} />
+                                <FontAwesomeIcon icon={faTruckFast} />
                                 <span class="nav-text">
                                   Buy Business Packages
                                 </span>
@@ -317,8 +324,8 @@ const Navbar = () => {
                             </li>
                             <li>
                               <a class="dropdown-item" href="#">
-                                <FontAwesomeIcon icon={faUser} />
-                                <span class="nav-text"> Bought Packages &</span>
+                                <FontAwesomeIcon icon={faWallet} />
+                                <span class="nav-text">Bought Packages & </span>
                                 Billing
                               </a>
                             </li>
@@ -327,13 +334,13 @@ const Navbar = () => {
                             </li>
                             <li>
                               <a class="dropdown-item" href="#">
-                                <FontAwesomeIcon icon={faUser} />
+                                <FontAwesomeIcon icon={faCircleInfo} />
                                 <span class="nav-text"> Help</span>
                               </a>
                             </li>
                             <li>
                               <a class="dropdown-item" href="#">
-                                <FontAwesomeIcon icon={faUser} />
+                                <FontAwesomeIcon icon={faBars} />
                                 <span class="nav-text"> Settings </span>
                               </a>
                             </li>
@@ -342,7 +349,7 @@ const Navbar = () => {
                             </li>
                             <li onClick={handleSignout}>
                               <a class="dropdown-item" href="#">
-                                <FontAwesomeIcon icon={faUser} />
+                                <FontAwesomeIcon icon={faRightFromBracket} />
                                 <span class="nav-text"> Logout</span>
                               </a>
                             </li>

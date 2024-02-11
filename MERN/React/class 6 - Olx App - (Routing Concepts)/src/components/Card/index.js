@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./index.css";
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faCartShopping, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 
 function Card(props) {
@@ -21,7 +21,7 @@ function Card(props) {
         <div class="card-body">
           <div className="title-section">
             <h4 class="card-title product-title">{`RS ${price}`} </h4>
-            <h5 class="card-title">
+            <h5 class="card-title heart-icon">
               <FontAwesomeIcon icon={faHeart} />
             </h5>
           </div>
@@ -29,9 +29,15 @@ function Card(props) {
           <p class="card-text  ellipsis">{description}</p>
 
           <p class="card-text brand">{title}</p>
-          <p class="card-text updated-date">
-            <small class="text-muted">Last updated 3 days ago</small>
-          </p>
+
+          <div className="title-section">
+            <p class="card-text updated-date">
+              <small class="text-muted">Last updated 3 days ago</small>
+            </p>
+            <h5 class="card-title cart-icon">
+              <FontAwesomeIcon icon={faCartShopping} />
+            </h5>
+          </div>
         </div>
       </div>
     </>
