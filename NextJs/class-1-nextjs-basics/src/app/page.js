@@ -18,7 +18,7 @@ export default async function Home() {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 m-10">
         {allMemes.map((meme) => (
           <Link
-            href={`/meme-maker?id=${meme.id}`}
+            href={`/meme-maker/${meme.id}`}
             key={meme.id}
             className="rounded  shadow-lg"
           >
