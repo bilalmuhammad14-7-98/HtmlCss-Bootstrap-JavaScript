@@ -40,7 +40,7 @@ function DashboardNavigator() {
   return (
     <Stack.Navigator>
       <Stack.Screen name="DashboardScreen" component={Dashboard} />
-      <Stack.Screen name="BottomNavigationTabs" component={BottomTabs} />
+      {/* <Stack.Screen name="BottomNavigationTabs" component={BottomTabs} /> */}
       <Stack.Screen name="Destination" component={Destination} />
       <Stack.Screen name="Pickup" component={Pickup} />
       <Stack.Screen name="CarSelection" component={CarSelection} />
