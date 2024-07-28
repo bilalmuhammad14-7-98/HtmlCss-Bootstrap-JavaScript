@@ -8,11 +8,12 @@ const themeSlice = createSlice({
 
   reducers: {
     updateTheme: (state, data) => {
+      console.log(state, "----", data, "0--------");
       state.theme = data.payload;
     },
   },
 });
 
-export const updateTheme = themeSlice.actions;
+export const { updateTheme } = themeSlice.actions;
 
 export default themeSlice;
